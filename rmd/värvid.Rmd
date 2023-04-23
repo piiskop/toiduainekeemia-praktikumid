@@ -153,11 +153,6 @@ Selle töö teostasin Ants-Andre Länsiga:
     ```{r label = "optical-density-of-carrot"}
     densities <- readxl::read_excel("rmd/Kollane paprika ja kollane porgand_Lans_Piiskop.xlsx")
     
-    librarian::shelf(c(
-      "ggplot2",
-      "latex2exp"
-    ))
-    
     min_wave_length <- min(densities$`Wavelength nm.`)
     max_wave_length <- max(densities$`Wavelength nm.`)
 
@@ -184,6 +179,12 @@ Selle töö teostasin Ants-Andre Länsiga:
     Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-carrot) leheküljel `r render_pageref(reference = "fig:whole-graph-of-carrot")`.
     
     ```{r label = "whole-graph-of-carrot", fig.cap = "Kollase porgandi optilise tiheduse terve graafik."}
+    
+    librarian::shelf(c(
+      "ggplot2",
+      "latex2exp"
+    ))
+
     ggplot(data = densities, aes(x = `Wavelength nm.`, y = `kollane porgand - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
       labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
 

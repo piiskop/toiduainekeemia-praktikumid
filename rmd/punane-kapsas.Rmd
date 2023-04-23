@@ -1,0 +1,227 @@
+# Indikaatorvärv punasest kapsast
+
+## Kuupäev
+
+2023-03-01
+
+## Töö eesmärk
+
+Antotsüaniini sisaldus kindlaks tehtud.
+
+## Kasutatud töövahendid
+
+1. Keeduklaasid,
+
+2. lehter,
+
+3. filterpaber,
+
+4. spaatlid,
+
+5. pipetid,
+
+6. küvetid,
+
+7. saumikser.
+
+## Reagentide kogused
+
+```{r label = "quantity_of_acid_or_lye"}
+quantity_of_acid_or_lye <- 2
+total_quantity_of_acid_or_lye <- quantity_of_acid_or_lye * 2
+
+```
+
+1.  \num{`r as.character(total_quantity_of_acid_or_lye)`} tilka \num{30}-\unit{\percent} etaanhapet,
+
+2.  \num{`r as.character(total_quantity_of_acid_or_lye)`} tilka \num{0,2}-\unit{\mol\per\l} \ce{NaOH},
+
+3. \qty{10,4}{\g} punast kapsast.
+
+## Töö käik
+
+Selle töö teostasin Ants-Andre Länsiga:
+
+1. Kaalusime välja punase kapsa.
+
+2. Lisasime \qty{150}{\ml} vett.
+
+3. Purustasime saumikseriga.
+
+4. Saadud suspensiooni filtrisime.
+
+5. Tühja keeduklaasi mõõtsime \qty{15}{\ml} ekstrakti.
+
+6. Kordasime sammu \num{5} kaks korda.
+
+7. Lisasime sammul \num{5} mainitud ekstraktile ja selle kogusele selles keeduklaasis \qty{135}{\ml} destilleeritud vett.
+
+8.  Kordasime sammu \num{6} kaks korda.
+
+    ```{r label = "quantity-of-cabbage-extract"}
+    quantity_of_extract <- 5
+    
+    ```
+
+9.  Mõõtsime tühja eri keeduklaasi välja \qty{`r as.character(quantity_of_extract)`}{\ml} ekstrakti.
+
+    ```{r label = "quantity-of-water-for-coloring"}
+    quantity_of_water_for_coloring <- 45
+    
+    ```
+
+10. Lisasime \qty{`r as.character(quantity_of_water_for_coloring)`}{\ml} destilleeritud vett.
+    
+11. Lisasime aeglaselt äädikhapet kuni värvuse muutuseni kokku \num{`r as.character(quantity_of_acid_or_lye)`} tilka.
+
+12. Kordasime samme \numrange{9}{10}.
+
+13. Lisasime aeglaselt leelist kuni värvuse muutuseni kokku \num{`r as.character(quantity_of_acid_or_lye)`} tilka.
+
+14. Kordasime samme \numrange{9}{10}.
+
+    ```{r label = "quantity-of-water-for-comparison"}
+    quantity_of_water_for_comparison <- quantity_of_extract + quantity_of_water_for_coloring
+    
+    ```
+    
+11. Tühja keeduklaasi sisestasime \qty{`r as.character(quantity_of_water_for_comparison)`}{\ml} destilleeritud vett.
+
+12. Kordasime sammu \num{11} kaks korda.
+
+13. Lisasime sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka äädikhapet.
+
+14. Lisasime sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka leelist.
+
+15. Sisestasime tühja eri küvetti sammul \num{11} mainitud sama keeduklaasi lahuse.
+
+16. Kordasime sammu \num{15}.
+
+17. Sisestasime tühja eri küvetti sammul \num{9} mainitud eri keeduklaasi lahuse.
+
+18. Lasime juhendajal mõõta neeldumisspektri.
+
+19. Sisestasime tühja eri küvetti sammul \num{11} mainitud eri keeduklaasi lahuse.
+
+20. Kordasime samme \numrange{16}{18}.
+
+21. Kordasime samme \numrange{19}{20}.
+
+22. Juhendaja tekitas meile sisendandmete faili.
+
+23. Sisendfaili põhjal näitan kapsa neeldumisspektrid.
+
+    Terve optilise tiheduse graafik äädikhappega kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage-with-acid) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage-with-acid")`.
+    
+    ```{r label = "whole-graph-of-cabbage-with-acid", fig.cap = "Kapsavedeliku ja äädikhappe segu neeldumisspektri täisgraafik."}
+    densities_of_cabbage <- readxl::read_excel("rmd/KAPSAS_Lans_Piiskop.xlsx")
+    
+    librarian::shelf(c(
+      "ggplot2",
+      "latex2exp"
+    ))
+
+    ggplot(data = densities_of_cabbage, aes(x = `Wavelength nm.`, y = `lilla lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+
+    ```
+    
+    Müra eemaldatud, olulise osa äädikhappe lisandiga kapsavedeliku optilise tiheduse graafik on näha joonisel \@ref(fig:important-part-of-graph-of-cabbage-with-acid) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-cabbage-with-acid")`.
+
+    ```{r label = "important-part-of-graph-of-cabbage-with-acid", fig.cap = paste("Punase kapsa, mille vedelikku on lisatud äädikhapet, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = "")}
+    start <- 260
+    end <- 700
+    subset_of_densities_of_cabbage <- subset(densities_of_cabbage, start < `Wavelength nm.` & end > `Wavelength nm.`)
+
+    ggplot(data = subset_of_densities_of_cabbage, aes(x = `Wavelength nm.`, y = `lilla lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+    
+    ```
+    
+    Mürata jooniselt on näha kolm tippväärtust. Lasen need välja arvutada:
+    
+    ```{r label = "peak-indices-for-cabbage-with-acid"}
+    librarian::shelf(c(
+      "pracma"
+    ))
+    
+    peak_indices_of_cabbage_with_acid <- findpeaks(subset_of_densities_of_cabbage$`lilla lahus_g1 - RawData`, npeaks = Inf, peakpat = "[+][0]{0,}[-]")
+    
+    wave_length_1_of_cabbage_with_acid <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage_with_acid[1, 2]]
+    wave_length_2_of_cabbage_with_acid <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage_with_acid[2, 2]]
+    wave_length_3_of_cabbage_with_acid <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage_with_acid[3, 2]]
+    
+    ```
+    
+    Tippväärtused on \num{`r as.character(peak_indices_of_cabbage_with_acid[1, 1])`}, \num{`r as.character(peak_indices_of_cabbage_with_acid[2, 1])`} ja \num{`r as.character(peak_indices_of_cabbage_with_acid[3, 1])`}, millele vastavad lainepikkused \qty{`r as.character(wave_length_1_of_cabbage_with_acid)`}{\nm}, \qty{`r as.character(wave_length_2_of_cabbage_with_acid)`}{\nm} ja \qty{`r as.character(wave_length_3_of_cabbage_with_acid)`}{\nm}.
+
+    Terve optilise tiheduse graafik leelisega kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage-with-lye) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage-with-lye")`.
+    
+    ```{r label = "whole-graph-of-cabbage-with-lye", fig.cap = "Kapsavedeliku ja leelise segu neeldumisspektri täisgraafik."}
+    ggplot(data = densities_of_cabbage, aes(x = `Wavelength nm.`, y = `SININE_lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+
+    ```
+    
+    Müra eemaldatud, olulise osa leelise lisandiga kapsavedeliku optilise tiheduse graafik on näha joonisel \@ref(fig:important-part-of-graph-of-cabbage-with-lye) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-cabbage-with-lye")`.
+
+    ```{r label = "important-part-of-graph-of-cabbage-with-lye", fig.cap = paste("Punase kapsa, mille vedelikku on lisatud leelist, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = "")}
+    ggplot(data = subset_of_densities_of_cabbage, aes(x = `Wavelength nm.`, y = `SININE_lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+    
+    ```
+    
+    Mürata jooniselt on näha kaks tippväärtust. Lasen need välja arvutada:
+    
+    ```{r label = "peak-indices-for-cabbage-with-lye"}
+    peak_indices_of_cabbage_with_lye <- findpeaks(subset_of_densities_of_cabbage$`SININE_lahus_g1 - RawData`, npeaks = Inf, peakpat = "[+][0]{0,}[-]")
+    
+    wave_length_1_of_cabbage_with_lye <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage_with_lye[1, 2]]
+    wave_length_2_of_cabbage_with_lye <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage_with_lye[2, 2]]
+    
+    ```
+    
+    Tippväärtused on \num{`r as.character(peak_indices_of_cabbage_with_lye[1, 1])`} ja \num{`r as.character(peak_indices_of_cabbage_with_lye[2, 1])`}, millele vastavad lainepikkused \qty{`r as.character(wave_length_1_of_cabbage_with_lye)`}{\nm} ja \qty{`r as.character(wave_length_2_of_cabbage_with_lye)`}{\nm}.
+
+    Terve optilise tiheduse graafik lisamata happe ja leeliseta kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage")`.
+    
+    ```{r label = "whole-graph-of-cabbage", fig.cap = "Kapsavedeliku, millesse pole lisatud hapet ega leelist, segu neeldumisspektri täisgraafik."}
+    ggplot(data = densities_of_cabbage, aes(x = `Wavelength nm.`, y = `lilla lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+
+    ```
+    
+    Müra eemaldatud, olulise osa leelise ja happe lisandiga kapsavedeliku optilise tiheduse graafik on näha joonisel \@ref(fig:important-part-of-graph-of-cabbage) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-cabbage")`.
+
+    ```{r label = "important-part-of-graph-of-cabbage", fig.cap = paste("Punase kapsa, mille vedelikku ei olnud lisatud leelist ega hapet, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = "")}
+    ggplot(data = subset_of_densities_of_cabbage, aes(x = `Wavelength nm.`, y = `LILLA lilla_lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+    
+    ```
+    
+    Mürata jooniselt on näha kolm tippväärtust. Lasen need välja arvutada:
+    
+    ```{r label = "peak-indices-for-cabbage"}
+    peak_indices_of_cabbage <- findpeaks(subset_of_densities_of_cabbage$`LILLA lilla_lahus_g1 - RawData`, npeaks = Inf, peakpat = "[+][0]{0,}[-]")
+    
+    wave_length_1_of_cabbage <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage[1, 2]]
+    wave_length_2_of_cabbage <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage[2, 2]]
+    wave_length_3_of_cabbage <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage[3, 2]]
+    
+    ```
+    
+    Tippväärtused on \num{`r as.character(peak_indices_of_cabbage[1, 1])`}, \num{`r as.character(peak_indices_of_cabbage[2, 1])`} ja \num{`r as.character(peak_indices_of_cabbage[3, 1])`}, millele vastavad lainepikkused \qty{`r as.character(wave_length_1_of_cabbage)`}{\nm}, \qty{`r as.character(wave_length_2_of_cabbage)`}{\nm} ja \qty{`r as.character(wave_length_3_of_cabbage)`}{\nm}.
+
+## Arutelu
+
+Kui uskuda Andrew Zimmermann Jonesi tabelit lainepikkuste vahemike tõlgendamiseks värvideks[@andrewzimmermanjones_2006_visible], siis graafikute tippväärtustest näeme, et enamasti on neeldunud valguse roheliseks tõlgendatava värvuse alas. See tähendab, et alles jääb nähtavaks roosa.
+
+Nähtava valguse osas neeldus äädikhappe lisandiga kapsavedelikus kõige enam valgus lainepikkusel \qty{`r as.character(wave_length_3_of_cabbage_with_acid)`}{\nm}. See tähendab, et näha peaks olema eelkõige roosa värvus ja nii oligi.
+
+Nähtava valguse osas neeldus naatriumhüdroksiidi lisandiga kapsavedelikus kõige enam valgus lainepikkusel \qty{`r as.character(wave_length_2_of_cabbage_with_lye)`}{\nm}, mida tõlgendatakse oranži värvusena. See tähendab, et näha peaks olema eelkõige sinine värvus ja nii oligi.
+
+Nähtava valguse osas neeldus happe ja leelise lisandita kapsavedelikus kõige enam valgus lainepikkusel \qty{`r as.character(wave_length_3_of_cabbage)`}{\nm}, mida tõlgendatakse oranži värvusena. See tähendab, et näha peaks olema eelkõige roosa värvus ja nii peaaegu et oligi. Kui täpsemalt võrrelda äädikhappe lisandiga ning happe ja leelise lisandita kapsavedeliku optilise tiheduse inimesele nähtava spektri tippväärtust, siis viimati mainitud lahuse vastav tippväärtus on lähemal kollase värvuse lainepikkuste vahemikule, mis põhjendab lahuse lilla värvuse, millisena meie seda nägime.
+
+Punasele kapsale annab lilla värvuse flavonoid antotsüaniin[@a2000_where]. See muudab happelises ja aluselises keskkonnas värvi vastavalt meie eksperimendile.
+
+Seega on saadud spektrite abil võimalik hinnata antotsüaniini sisaldust proovis.

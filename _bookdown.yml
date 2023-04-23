@@ -4,5 +4,8 @@ delete_merged_file: true
 rmd_files: [
   "index.Rmd",
   "rmd/värvid.Rmd",
+  "rmd/punane-kapsas.Rmd",
+  "rmd/liha.Rmd",
+  "rmd/piim.Rmd",
   "references.Rmd"
 ]

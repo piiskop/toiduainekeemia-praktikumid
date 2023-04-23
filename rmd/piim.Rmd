@@ -1,0 +1,211 @@
+# Piima analüüs
+
+## Kuupäev
+
+2023-03-15
+
+## Rasvasisaldus
+
+### Töö eesmärk
+
+Piima rasvasisaldus kontrollitud.
+
+### Kasutatud töövahendid
+
+1. Keeduklaasid,
+
+2. kaal,
+
+3. mõõtpipett või -silinder,
+
+4. Pasteuri pipett,
+
+5. tõmbekapp,
+
+6. klaaspulk,
+
+7. katseklaas.
+
+### Reagentide kogused
+
+1. Destilleeritud vesi (ilmselt vahendite puhastamiseks, sest juhendis pole sellega seotult kirjendatud ühtki tegevust),
+
+2. \qty{10}{\ml} metüleenkloriidi,
+
+3. \qty{2}{\ml} \num{5}-\unit{\percent} \ce{Na2CO3} ja
+
+4. \numrange{2}{3} tilka \num{0,5}-\unit{\percent} \ce{KMnO4}.
+
+### Töö käik
+
+Töö teostasin Ants-Andre Länsiga:
+
+1.  Kaalusime \num{50}-\unit{\ml} keeduklaasi:
+
+    ```{r label = "beaker-for-milk"}
+    mass_of_beaker_for_milk <- 37.79
+
+    ```
+
+    Selle keeduklaasi massiks mõõtsime \qty{`r as.character(mass_of_beaker_for_milk)`}{\g}.
+    
+2. Mõõtsime sellesse \qty{15}{\ml} piima.
+
+3.  Kaalusime klaasi koos piimaga:
+
+    ```{r label = "beaker-with-milk"}
+    mass_of_beaker_with_milk <- 51.71
+
+    ```
+
+    Selle keeduklaasi massiks koos piimaga mõõtsime \qty{`r as.character(mass_of_beaker_with_milk)`}{\g}.
+   
+4.  Lasen arvutada piima massi:
+
+    ```{r label = "mass-of-milk"}
+    mass_of_milk <- mass_of_beaker_with_milk - mass_of_beaker_for_milk
+    
+    ```
+    
+    Piima mass oli \qty{`r as.character(mass_of_milk)`}{\g}.
+    
+5.  Valasime piima suurde katseklaasi.
+
+6. Lisasime tõmbekapi all metüleenkloriidi.
+
+7. Sulgesime tuubi korgiga.
+
+8. Loksutasime rahulikult pool minutit.
+
+9. Lasime segul kihistuda.
+
+10. Viisime pealmise kihi Pasteur'i pipetiga tagasi keeduklaasi.
+
+[]{#rasvata-piim}
+
+11. Kaalusime rasvata piimaga klaasi:
+
+    ```{r label = "mass-of-milk-without-fat-in-beaker"}
+    mass_of_milk_without_fat_in_beaker <- 50.99
+    mass_of_milk_without_fat <- mass_of_milk_without_fat_in_beaker - mass_of_beaker_for_milk
+    
+    ```
+    
+    Rasvata piim kaalus \qty{`r as.character(mass_of_milk_without_fat)`}{\g}. Selle piima säilitasime [valgusisalduse]{#valgusisaldus} eksperimendiks.
+    
+12. Lasen arvutada rasva koguse:
+
+    ```{r label = "mass-of-fat"}
+    mass_of_fat <- mass_of_milk - mass_of_milk_without_fat
+    
+    ```
+    
+    Rasvata piim kaalus \qty{`r as.character(signif(mass_of_fat, digits = 5))`}{\g}.
+    
+13. Lasen arvutada rasvasisalduse:
+
+    ```{r label = "fat-percent-in-milk"}
+    experimental_fat_percent_in_milk <- mass_of_fat / mass_of_milk * 100
+    
+    ```
+    
+    Piima rasvasisaldus oli \qty{`r as.character(signif(experimental_fat_percent_in_milk, digits = 3))`}{\percent}.
+
+14. Lasen arvutada meie väljaselgitatud piima rasvasisalduse ja pakendile märgitud piima rasvasisalduse suhtelise erinevuse:
+
+    ```{r label = "fat-percent-difference-in-milk"}
+    theoretical_fat_percent_in_milk <- 2.5
+    fat_percent_difference_in_milk <- (theoretical_fat_percent_in_milk - experimental_fat_percent_in_milk) / theoretical_fat_percent_in_milk
+    
+    ```
+    
+    Suhteline erinevus piima rasvasisalduses oli \num{`r as.character(signif(fat_percent_difference_in_milk, digits = 2))`}.
+    
+15. Mõõtsime tühja katseklaasi \ce{Na2CO3}.
+
+16. Lisasime \ce{KMnO4}.
+
+17. Lisasime mõned tilgad metüleenkloriidi piimast eraldatud rasvaga.
+
+18. Loksutasime. Värvus muutus roosast mattkollakaks-valkjaks. Järelikult kaaliumpermanganaat oksüdeeris rasva.
+
+[]{#valgusisaldus}
+
+## Valgusisaldus
+
+## Töö eesmärk
+
+Piima valgusisaldus kontrollitud.
+
+### Kasutatud töövahendid
+
+1. Keeduklaas,
+
+2. Büchneri kolb,
+
+3. filterpaber,
+
+4. Petri tass,
+
+5. tõmbekapp,
+
+6. klaaspulk,
+
+7. katseklaasid.
+
+### Reagentide kogused
+
+1.  \num{30} tilka äädikhapet,
+
+    ```{r label = "NaOH"}
+    quantity_of_NaOH_per_tube <- 2
+    number_of_tubes <- 3
+    quantity_of_NaOH <- number_of_tubes * quantity_of_NaOH_per_tube
+    
+    ```
+
+2.  \qty{`r as.character(quantity_of_NaOH)`}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust ja
+
+    ```{r label = "CuSO4"}
+    min_quantity_of_CuSO4_per_tube <- 1
+    max_quantity_of_CuSO4_per_tube <- 2
+    min_quantity_of_CuSO4 <- number_of_tubes * min_quantity_of_CuSO4_per_tube
+    max_quantity_of_CuSO4 <- number_of_tubes * max_quantity_of_CuSO4_per_tube
+    
+    ```
+    
+3. \numrange{`r as.character(min_quantity_of_CuSO4)`}{`r as.character(max_quantity_of_CuSO4)`} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
+
+### Töö käik
+
+1. Lisasime rasvasisalduse eksperimendi töö käigu [\num{11}. sammul]{#rasvata-piim} säilitatud rasvata piimale tõmbekapi all äädikhappe.
+
+2. Segasime pool minutit klaaspulgaga.
+
+3. Jätsime paariks minutiks seisma.
+
+4. Filtreerisime lahuse läbi filterpaberi ning säilitasime nii filtraadi kui sademe.
+
+5. Tühja katseklaasi pipeteerisime \qty{2}{\ml} filtraati.
+
+6. Tühja katseklaasi pipeteerisime \qty{2}{\ml} piima.
+
+7. Tühja katseklaasi pipeteerisime \qty{2}{\ml} vett.
+
+8. Veele lisasime veidi sadet.
+
+9. Asetasime veega katseklaasi kuuma vesivanni ja aeg-ajalt loksutasime, et sade lahustuks.
+
+10. Lisasime filtraadiga katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
+
+11. Lisasime piimaga katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
+
+12. Lisasime veega katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
+
+13. Lisasime filtraadiga katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
+
+14. Lisasime piimaga katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
+
+15. Lisasime veega katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
+
+16. Loksutasime sammudel \numrange{5}{7} mainitud katseklaase. Sisu kõikides katseklaasides värvus eri tooni roosakas-lillaks. Filtraadiga katseklaasis oli lõpuks segu kahkjaslilla, piimaga katseklaasis õrnroosa ja veega katseklaasis sügavlilla.

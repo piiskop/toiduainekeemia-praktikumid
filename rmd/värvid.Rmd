@@ -1,0 +1,324 @@
+# KAROTENOIDIDE ERALDAMINE, IDENTIFITSEERIMINE ja SISALDUSE MÄÄRAMINE värskes köögiviljas
+
+## Kuupäev
+
+2023-03-01
+
+## Töö eesmärgid
+
+1. Taimse materjali karoteinoidide ja klorofülli neeldumisspekter määratud.
+
+2. Uuritava proovi karotenoidne koostis iseloomustatud.
+
+3. β-karoteeni sisaldus uuritavas proovis määratud.
+
+4. Klorofülli olemasolu kindlaks tehtud.
+
+## Kasutatud töövahendid
+
+1. Nuga,
+
+2. riiv,
+
+3. uhmer,
+
+4. liiv,
+
+5. paberfilter,
+
+6. klaaslehter,
+
+7. mõõtesilinder,
+
+8. spaatel,
+
+9. kvartsküvetid,
+
+10. pipett,
+
+11. klaaspulk.
+
+## Reagentide kogused
+
+```{r label = "mass-of-carrot"}
+mass_of_carrot <- .91
+
+```
+
+1.  \qty{`r as.character(mass_of_carrot)`}{\g} kollast porgandit,
+
+2.  \qty{4,9}{\g} veevaba \ce{Na_2SO_4} porgandi jaoks,
+
+    ```{r label = "hexane-for-carrot"}
+    quantity_of_hexane_for_carrot_1 <- 5
+    quantity_of_hexane_for_carrot_2 <- 8 + 2.5 + 2.5 + 3
+    quantity_of_hexane_for_carrot_3 <- 6
+    quantity_of_hexane_for_carrot <- quantity_of_hexane_for_carrot_1 + quantity_of_hexane_for_carrot_2 + quantity_of_hexane_for_carrot_3
+    
+    ```
+
+3.  \qty{`r as.character(quantity_of_hexane_for_carrot)`}{\ml} heksaani porgandi jaoks,
+
+    ```{r label = "mass-of-bell-pepper"}
+    mass_of_bell_pepper <- .9
+
+    ```
+
+4. \qty{`r as.character(mass_of_bell_pepper)`}{\g} kollast paprikat,
+
+5. \qty{4,7}{\g} veevaba \ce{Na_2SO_4} paprika jaoks,
+
+    ```{r label = "hexane-for-bell-pepper"}
+    quantity_of_hexane_for_bell_pepper_1 = 8.8
+    quantity_of_hexane_for_bell_pepper_2 = 5.2
+    quantity_of_hexane_for_bell_pepper_3 = 6
+    quantity_of_hexane_for_bell_pepper_4 = 6
+    quantity_of_hexane_for_bell_pepper = quantity_of_hexane_for_bell_pepper_1 + quantity_of_hexane_for_bell_pepper_2 + quantity_of_hexane_for_bell_pepper_3 + quantity_of_hexane_for_bell_pepper_4
+    
+    ```
+
+6. \qty{`r as.character(quantity_of_hexane_for_bell_pepper)`}{\ml} heksaani paprika jaoks.
+
+## Töö käik
+
+Selle töö teostasin Ants-Andre Länsiga:
+
+1. Kaalusime kollase porgandi.
+
+2. Peenestasime proovi noaga.
+
+3. Hakitud proovi asetasime uhmrisse koos väikese koguse pestud liivaga.
+
+4. Uhmerdasime kuni ühtlase massi saamiseni.
+
+5. Lisasime uhmrisse naatriumsulfaadi.
+
+6. Jätkasime massi hõõrumist.
+
+7. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_carrot_1)`}{\ml} heksaani.
+
+8. Segasime hoolikalt spaatliga.
+
+9. Lisasime \qty{`r as.character(quantity_of_hexane_for_carrot_2)`}{\ml} heksaani.
+
+10. Filtrisime mõõtesilindrisse.
+
+11. Lisasime \qty{`r as.character(quantity_of_hexane_for_carrot_3)`}{\ml} heksaani.
+
+12. Filtrisime mõõtesilindrisse. Lõpetasime filtrimise, sest uhmris enam väga kollast värvust ei paistnud.
+
+    ```{r label = "quantity-of-extract"}
+    quantity_of_extract <- 18
+    
+    ```
+
+13. Mõõtsime mõõtesilindriga saadud ekstrakti üldmahuks \qty{`r as.character(quantity_of_extract)`}{\ml}.
+
+14. Kaalusime kollase paprika.
+
+15. Peenestasime proovi noaga.
+
+16. Hakitud proovi asetasime uhmrisse koos väikese koguse pestud liivaga.
+
+17. Uhmerdasime kuni ühtlase massi saamiseni.
+
+18. Lisasime uhmrisse naatriumsulfaadi.
+
+19. Jätkasime massi hõõrumist.
+
+20. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_1)`}{\ml} heksaani.
+
+21. Segasime hoolikalt spaatliga.
+
+22. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_2)`}{\ml} heksaani.
+
+23. Segasime hoolikalt spaatliga.
+
+24. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_3)`}{\ml} heksaani.
+
+25. Segasime hoolikalt spaatliga.
+
+26. Filtrisime mõõtesilindrisse.
+
+27. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_4)`}{\ml} heksaani.
+
+28. Kordasime samme \numrange{25}{26}, kuni uhmris enam kollast värvust väga ei paistnud.
+
+29. Mõõtsime mõõtesilindriga saadud ekstrakti üldmahuks \qty{`r as.character(quantity_of_extract)`}{\ml}.
+
+30. Täitsime \qty{1}{\cm} laiusega võrdlusküveti puhta n-heksaaniga.
+
+31. Täitsime mõõteküveti punktis 13 väljamõõdetud ekstraktiga.
+    
+    ```{r label = "optical-density-of-carrot"}
+    densities <- readxl::read_excel("rmd/Kollane paprika ja kollane porgand_Lans_Piiskop.xlsx")
+    
+    librarian::shelf(c(
+      "ggplot2",
+      "latex2exp"
+    ))
+    
+    min_wave_length <- min(densities$`Wavelength nm.`)
+    max_wave_length <- max(densities$`Wavelength nm.`)
+
+    ```
+
+32. Juhendaja määras spektrofotomeetri neeldumisspektri vahemikuks \qtyrange{`r as.character(min_wave_length)`}{`r as.character(max_wave_length)`}{\nm}.
+
+33. Asetasime võrdlusküveti spektrofotomeetrisse.
+
+34. Asetasime mõõteküveti spektrofotomeetrisse.
+
+35. Juhendaja käivitas spektrofotomeetri mõõtmisprotsessi.
+
+36. Täitsime \qty{1}{\cm} laiusega võrdlusküveti puhta n-heksaaniga.
+
+37. Täitsime mõõteküveti punktis 29 väljamõõdetud ekstraktiga.
+
+38. Kordasime samme \numrange{33}{35}.
+
+39. Juhendaja salvestas tulemused tabelarvutusfaili.
+
+40. Lasen välja selgitada porgandi optilise tiheduse. Selleks imporditakse esmalt sisendandmete fail:
+    
+    Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-carrot) leheküljel `r render_pageref(reference = "fig:whole-graph-of-carrot")`.
+    
+    ```{r label = "whole-graph-of-carrot", fig.cap = "Kollase porgandi optilise tiheduse terve graafik."}
+    ggplot(data = densities, aes(x = `Wavelength nm.`, y = `kollane porgand - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+
+    ```
+    
+    Müra eemaldatud, olulise osa graafik on näha joonisel \@ref(fig:important-part-of-graph-of-carrot) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-carrot")`.
+    
+    ```{r label = "important-part-of-graph-of-carrot", fig.cap = "Kollase porgandi optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{400}{500}{\\nm}, ääred välja arvatud."}
+    subset_of_densities <- subset(densities, 400 < `Wavelength nm.` & 500 > `Wavelength nm.`)
+
+    ggplot(data = subset_of_densities, aes(x = `Wavelength nm.`, y = `kollane porgand - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+    
+    ```
+    
+    Mürata jooniselt on näha kaks tippväärtust. Lasen need välja arvutada:
+    
+    ```{r label = "peak-indices-for-carrot"}
+    librarian::shelf(c(
+      "pracma"
+    ))
+    
+    peak_indices <- findpeaks(subset_of_densities$`kollane porgand - RawData`, npeaks = Inf, peakpat = "[+][0]{0,}[-]")
+    
+    wave_length_1 <- subset_of_densities$`Wavelength nm.`[peak_indices[1, 2]]
+    wave_length_2 <- subset_of_densities$`Wavelength nm.`[peak_indices[2, 2]]
+    
+    ```
+    
+    Tippväärtused on \num{`r as.character(peak_indices[1, 1])`} ja \num{`r as.character(peak_indices[2, 1])`}, millele vastavad lainepikkused \qty{`r as.character(wave_length_1)`}{\nm} ja \qty{`r as.character(wave_length_2)`}{\nm}.
+    
+    Juhendis eeldatakse, et maksimumväärtus on graafikul hoopis \qty{450}{\nm} puhul ja kästakse selle järgi arvutada $\beta$-karoteeni sisaldus proovis vastavalt valemile \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")`. Selles valemis on järgmised tähistused:
+    
+    *K*
+    : $\beta$-karoteeni sisaldus uuritavas proovis milligrammprotsentides,
+    
+    *A*
+    : ekstrakti optiline tihedus,
+    
+    *V*
+    : ekstrakti kogumaht milliliitrites,
+    
+    *d*
+    : ekstrahendi tihedus,
+    
+    *E*
+    : \qty{1}{\percent} $\beta$-karoteeni lahuse ekstinktsioon,
+    
+    *g*
+    : uuritava proovi mass grammides.
+    
+    ```{=tex}
+    \begin{align}
+    K = \frac{A \times V \times d \times 10^3}{E \times g}.
+    (\#eq:K)
+    \end{align}
+
+    ```
+    
+    Lasen arvutada $\beta$-karoteeni sisalduse lainepikkuse \qty{450}{\nm} korral:
+    
+    ```{r label = "calculation-of-beta-carotene-for-carrot"}
+    absorption_at_450_nm <- subset(subset_of_densities, 450 == `Wavelength nm.`)
+    
+    #' This function calculates the content of β-Carotene.
+    #' 
+    #' @param A optical density
+    #' @param V the quantity of the extract in milliliters
+    #' @param g the mass of the sample in grams
+    #' 
+    #' @returns the the content of β-Carotene
+    calculate_K <- function(A, V, g) {
+      K <- A * V * .6548 * 10^3 / (2600 * g)
+      
+      return(K)
+    }
+    
+    K_of_carrot <- calculate_K(A = absorption_at_450_nm$`kollane porgand - RawData`, V = quantity_of_extract, g = mass_of_carrot)
+    
+    ```
+    
+    $\beta$-karoteeni sisaldus lainepikkuse \qty{450}{\nm} korral kollase porgandi proovis oli \qty{`r as.character(signif(K_of_carrot, digits = 2))`}{\mg\percent}.
+
+41. Lasen välja selgitada paprika optilise tiheduse. Selleks imporditakse esmalt sisendandmete fail:
+    
+    Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-bell-pepper) leheküljel `r render_pageref(reference = "fig:whole-graph-of-bell-pepper")`.
+    
+    ```{r label = "whole-graph-of-bell-pepper", fig.cap = "Kollase paprika optilise tiheduse terve graafik."}
+    ggplot(data = densities, aes(x = `Wavelength nm.`, y = `kollane paprika - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+
+    ```
+    
+    Müra eemaldatud, olulise osa graafik on näha joonisel \@ref(fig:important-part-of-graph-of-bell-pepper) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-bell-pepper")`.
+    
+    ```{r label = "important-part-of-graph-of-bell-pepper", fig.cap = "Kollase paprika optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{400}{500}{\\nm}, ääred välja arvatud."}
+    subset_of_densities <- subset(densities, 400 < `Wavelength nm.` & 500 > `Wavelength nm.`)
+
+    ggplot(data = subset_of_densities, aes(x = `Wavelength nm.`, y = `kollane paprika - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
+      labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
+    
+    ```
+    
+    Mürata jooniselt on näha kaks tippväärtust. Lasen need välja arvutada:
+    
+    ```{r label = "peak-indices-for-bell-pepper"}
+    librarian::shelf(c(
+      "pracma"
+    ))
+    
+    peak_indices <- findpeaks(subset_of_densities$`kollane paprika - RawData`, npeaks = Inf, peakpat = "[+][0]{0,}[-]")
+    
+    wave_length_1 <- subset_of_densities$`Wavelength nm.`[peak_indices[1, 2]]
+    wave_length_2 <- subset_of_densities$`Wavelength nm.`[peak_indices[2, 2]]
+    
+    ```
+    
+    Tippväärtused on \num{`r as.character(peak_indices[1, 1])`} ja \num{`r as.character(peak_indices[2, 1])`}, millele vastavad lainepikkused \qty{`r as.character(wave_length_1)`}{\nm} ja \qty{`r as.character(wave_length_2)`}{\nm}.
+    
+    Juhendis eeldatakse, et maksimumväärtus on graafikul hoopis \qty{450}{\nm} puhul ja kästakse selle järgi arvutada $\beta$-karoteeni sisaldus proovis vastavalt valemile \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")`.
+    
+    Lasen arvutada $\beta$-karoteeni sisalduse lainepikkuse \qty{450}{\nm} korral:
+    
+    ```{r label = "calculation-of-beta-carotene-for-bell-pepper"}
+    absorption_at_450_nm <- subset(subset_of_densities, 450 == `Wavelength nm.`)
+
+    K_of_bell_pepper <- calculate_K(A = absorption_at_450_nm$`kollane paprika - RawData`, V = quantity_of_extract, g = mass_of_bell_pepper)
+    
+    ```
+    
+    $\beta$-karoteeni sisaldus lainepikkuse \qty{450}{\nm} korral kollase paprika proovis oli \qty{`r as.character(signif(K_of_carrot, digits = 2))`}{\mg\percent}.
+
+## Arutelu
+
+Valem \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")` on minu jaoks ebaselge. Ei leidnud ma sellist valemit ka Internetist. Eriti ebaselgeks teeb selle valemi asjaolu, et kõik ühikud taanduvad, aga ometi tahetakse vastavalt juhendile ühikuks määrata milligrammprotsenti. See ühik - milligrammprotsenti - näitab, mitu milligrammi $\beta$-karoteeni on \qty{100}{\mg} uuritavas proovis. Nüüd saan ma küll aru, miks milligrammprotsenti võib olla ka ühikuta, sest see on milligrammid jagatuna milligrammidega. Samas, Wikipedias arutletakse, et mõeldud oli kontsentratsiooni massiühikutes ruumalaühiku kohta, kuid ebakorrektselt[@a2021_milligram], sest korrektne selgitus tähendaks hoopis sajandikku milligrammi. Aga sellises juhus ei ole valem korrektne.
+
+Vastavalt juhendis esitatud neeldumisgraafikute kujule sisaldasid nii porgandi kui paprika proov üheaegselt erinevaid karotenoide.
+

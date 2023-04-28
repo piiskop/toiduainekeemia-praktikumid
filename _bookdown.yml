@@ -7,5 +7,6 @@ rmd_files: [
   "rmd/punane-kapsas.Rmd",
   "rmd/liha.Rmd",
   "rmd/piim.Rmd",
+  "rmd/askorbiinhappe-määramine.Rmd",
   "references.Rmd"
 ]

@@ -17,7 +17,7 @@ linestretch: 1.5
 
 fontsize: 12pt
 mainfont: DejaVu Serif # for displaying both Chinese symbols and emojis
-CJKmainfont: Droid Sans Fallback
+CJKmainfont: Source Han Serif # Droid Sans Fallback
 
 bibliography: [references.bib]
 csl: apa-numeric-superscript-brackets.csl
@@ -84,6 +84,12 @@ print_table <- function(table, caption, digits = 2, additional_header = NULL, fo
   } else {
     librarian::shelf("kableExtra")
 
+    if (knitr::is_latex_output()) {
+      is_latex <- TRUE
+    } else {
+      is_latex <- FALSE
+    }
+    
     if (do_i_transpose) {
       transposed_table <- t(table)
       rownames(transposed_table) <- colnames(table)

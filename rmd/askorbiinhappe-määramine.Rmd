@@ -1,0 +1,314 @@
+# Askorbiinhappe määramine
+
+## Kuupäevad
+
+2023-03-22 ja 2023-03-29
+
+## Töö eesmärk
+
+C-itamiini sisalduse kontrollimise oskus omandatud.
+
+## Kasutatud töövahendid
+
+1. Keeduklaasid,
+
+2. lehter,
+
+3. filterpaber,
+
+4. \num{50}-\unit{\ml} bürett,
+
+5. Erlenmeyeri kolb,
+
+6. magnetsegaja,
+
+7. mõõtesilinder,
+
+8. pipetid,
+
+9. klaaspulgad,
+
+10. uhmer ja uhmrinui ning
+
+11. liiv.
+
+## Reagentide kogused
+
+1.  C-vitamiin,
+    
+    ```{r label = "mass-of-c-in-spray"}
+    number_of_sprays <- 5
+    mass_of_C_in_spray <- 120e-3
+    
+    ```
+
+2.  *Suukaudne pihusti C-vitamiin*, mille \num{`r as.character(number_of_sprays)`} pihustust sisaldab \qty{`r as.character(mass_of_C_in_spray)`}{\mg} C-vitamiini,
+
+3. \num{0,5}-\unit{\percent} tärklise lahus,
+
+4.  \num{0,6}-\unit{\mol\per\l} \ce{KI}, mis on vesilahuses ioonideks lagunenud nagu võrrandis \@ref(eq:KI) leheküljel `r render_pageref(reference = "eq:KI")` [@a2016_h2so4, @equation],
+
+    ```{=tex}
+    \begin{align}
+    \ce{KI(aq) -> K^+(aq) + I^-(aq)}.
+    (\#eq:KI)
+    \end{align}
+    
+    ```
+
+5. \num{1}-\unit{\mol\per\l} \ce{HCl}, mis on vesilahuses ioonideks lagunenud nagu võrrandis  \@ref(eq:HCl) leheküljel `r render_pageref(reference = "eq:HCl")`,
+
+    ```{=tex}
+    \begin{align}
+    \ce{HCl(aq) -> H^+(aq) + Cl^-(aq)}.
+    (\#eq:HCl)
+    \end{align}
+    
+    ```
+
+6. \ce{KIO3},
+
+7. vesi.
+    
+## Töö käik
+
+Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga:
+
+```{r label = "mass-of-C"}
+mass_of_C <- 1
+
+```
+
+1.  Uhmerdasime \num{`r as.character(mass_of_C)`}-\unit{\mg} C-vitamiini sisaldava tableti.
+
+    ```{r label = "volume-of-H2O"}
+    volume_of_H2O <- 200
+
+    ```
+
+2. Lahustasime tableti \qty{`r as.character(volume_of_H2O)`}{\ml} vees. Segasime.
+
+3. Filtreerisime saadud lahuse.
+
+4.  Mõõtsime \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
+
+    ```{r label = "volume-of-C"}
+    volume_of_C <- 5
+
+    ```
+
+5. Mõõtsime samasse kolbi \qty{`r as.character(volume_of_C)`}{\ml} C-vitamiini lahust.
+
+6. Mõõtsime samasse kolbi \qty{5}{\ml} \num{0,6}-\unit{\mol\per\l} \ce{KI} lahust.
+
+7. Mõõtsime samasse kolbi \qty{5}{\ml} \num{0,5}-\unit{\percent} tärklise lahust.
+
+8. Mõõtsime samasse kolbi \qty{5}{\ml} \num{1}-\unit{\mol\per\l} \ce{HCl} lahust.
+
+9. Segasime magnetsegajaga.
+
+10. Kolbi valmistatud lahust tiitrisime ühtlase sinise värvuse tekkeni. Kaaliumjodiidi lahuses olid kaaliumi ja joodi ioonid, millest kaaliumi omad enam tähtsust ei oma. Kaaliumjodaat reageeris joodi ioonidega happelises keskkonnas, mille tekitas \ce{HCl}, mis oli vesilahuses samuti ioonidena. Valemis \@ref(eq:KIO3-I-I2-K) leheküljel `r render_pageref(reference = "eq:KIO3-I-I2-K")` on esitatud kaaliumjodaadi ja joodi iooni reageerimise tasakaalustamata ja kõikide produktideta skeem [@santamonicacollege_2017_10].
+
+    ```{=tex}
+    \begin{align}
+    \ce{KIO3(aq)+I-(aq) -> I2(aq)+K+(aq)}.
+    (\#eq:KIO3-I-I2-K)
+    \end{align}
+    
+    ```
+
+    Tasakaalustamiseks tuleb esmalt välja selgitada, millised aatomid redutseeruvad ja millised oksüdeeruvad [@please]. Ainus aatom, mille oksüdatsiooniaste muutub, on jood, mis seega üheaegselt redutseerub ja oksüdeerub. Süsteemis \@ref(eq:2KIO3-2I-I2-multiplying) leheküljel `r render_pageref(reference = "eq:2KIO3-2I-I2-multiplying")` on näidatud, et kahe joodi aatomi jaoks on vaja kaht \ce{KIO3} molekuli, mis kokku liidavad \num{10} elektroni, ning samuti on kahe joodi aatomi jaoks vaja kaht joodi iooni, mis kokku loovutavad \num{2} elektroni. Et reaktsiooni lõpuks ei jää elektrone üksikult hulpima, siis peab loovutatavate ja liidetavate elektronide arv olema sama, mistõttu tuleb teine võrrand korrutada \num{5}'ga. Tulemus on näha süsteemis \@ref(eq:2KIO3-2I-I2-multiplied) leheküljel `r render_pageref(reference = "eq:2KIO3-2I-I2-multiplied")`.
+
+    ```{=tex}
+	\begin{align}
+    \begin{cases}
+	\ce{2KIO3(aq)} + 10e &\ce{-> I2(aq) + 2K+(aq)}\\
+	\ce{2I-(aq)} - 2e &\ce{-> I2(aq)} | \times 5
+\end{cases}.
+    (\#eq:2KIO3-2I-I2-multiplying)
+    \end{align}
+    
+    ```
+
+    ```{=tex}
+	\begin{align}
+    \begin{cases}
+	\ce{2KIO3(aq)} + 10e &\ce{-> I2(aq) + 2K+(aq)}\\
+	\ce{10I-(aq)} - 10e &\ce{-> 5I2(aq)}
+\end{cases}.
+    (\#eq:2KIO3-2I-I2-multiplied)
+    \end{align}
+    
+    ```
+
+    Süsteemi esimeses osas ei ole hapniku aatomid tasakaalus. Vesilahuses olevate komponentide hapnikuaatomeid tasakaalustatakse vee molekulidega (süsteem \@ref(eq:2KIO3-2I-I2-H2O) leheküljel `r render_pageref(reference = "eq:2KIO3-2I-I2-H2O")`).
+
+    ```{=tex}
+	\begin{align}
+    \begin{cases}
+	\ce{2KIO3(aq)} + 10e &\ce{-> I2(aq) + 2K+(aq) + 6H2O}\\
+	\ce{10I-(aq)} - 10e &\ce{-> 5I2(aq)}
+\end{cases}.
+    (\#eq:2KIO3-2I-I2-H2O)
+    \end{align}
+    
+    ```
+
+    Kuna nüüd on tasakaalust väljas vesiniku aatomite arv, tuleb vesilahuses oleva kraami puhul vee molekuli vesiniku aatomite arvu tasakaalustamiseks kasutada prootoneid (süsteem \@ref(eq:2KIO3-2I-I2-H) leheküljel `r render_pageref(reference = "eq:2KIO3-2I-I2-H")`).
+
+    ```{=tex}
+	\begin{align}
+    \begin{cases}
+	\ce{2KIO3(aq) + 12H+} + 10e &\ce{-> I2(aq) + 2K+(aq) + 6H2O}\\
+	\ce{10I-(aq)} - 10e &\ce{-> 5I2(aq)}
+\end{cases}.
+    (\#eq:2KIO3-2I-I2-H)
+    \end{align}
+    
+    ```
+
+    Lõpuks tuleb kogu süsteem kokku liita (võrrand \@ref(eq:2KIO3-12H-10I) leheküljel `r render_pageref(reference = "eq:2KIO3-12H-10I")`). Näha on, et kõiki komponente võiks olla pool korda näidatud kogust, kuid sellisel juhul ei toimuks täielik reaktsioon.
+
+    ```{=tex}
+	\begin{align}
+	\ce{2KIO3(aq) + 12H+ + 10I-(aq)} &\ce{-> 6I2(aq) + 2K+(aq) + 6H2O}.
+    (\#eq:2KIO3-12H-10I)
+    \end{align}
+    
+    ```
+    
+    Tekitatud joodi aatomid reageerivad koheselt askorbiinhappega, nagu näidatud võrrandis \@ref(eq:C6H8O6-I2) leheküljel `r render_pageref(reference = "eq:C6H8O6-I2")`.
+
+    ```{=tex}
+	\begin{align}
+	\ce{C6H8O6(aq) + I2(aq) -> C6H6O6(aq) + 2I-(aq) + 2H+(aq)}.
+    (\#eq:C6H8O6-I2)
+    \end{align}
+    
+    ```
+
+    Näha on, et askorbiinhappe ja dijoodi hulk on ühesugune. Vastavalt võrrandile \@ref(eq:2KIO3-12H-10I) leheküljel `r render_pageref(reference = "eq:2KIO3-12H-10I")` oli kaaliumjodaadi hulk kolmandik dijoodi hulka, mis tähendab, et kaaliumjodaadi hulk oli ühtlasi kolmandik askorbiinhappe hulka.
+    
+    ```{r label = "volume-of-KIO3"}
+    volume_of_KIO3 <- 25
+    
+    ```
+    
+    Tiitrimise lõpus mõõtsime kasutatud kaaliumjodaadi koguseks \qty{`r as.character(volume_of_KIO3)`}{\ml}.
+
+11. Lasen arvutada, mitu mooli C-vitamiini võtsime tiitrimiseks:
+    
+    ```{r label = "mass-of-C-in-bulb"}
+    mass_of_C_in_bulb <- mass_of_C / volume_of_H2O * volume_of_C
+    
+    ```
+
+    C-vitamiini mass Erlenmeyeri kolbis oli \qty{`r as.character(mass_of_C_in_bulb)`}{\g}.
+    
+    ```{r label = "carbon"}
+    M_12C <- .012
+    A_12C <- 12
+    M_u <- M_12C / A_12C
+
+    ```
+    
+    Piisab, kui võtta vaid aatommassi arvväärtus ja seda kasutada suhtelise aatommassina, et arvutada molaarmass \@ref(eq:molar-mass) leheküljel `r render_pageref(reference = "eq:molar-mass")`.
+
+    ```{=tex}
+    \begin{align}
+    M(X) = A_\text{r}(X) \cdot M_\text{u}.
+    (\#eq:molar-mass)
+    \end{align}
+
+    ```
+
+    ```{r label = "convert-from-Ar-to-M"}
+    convert_from_Ar_to_M <- function(A_r) {
+      return(A_r * M_u)
+    }
+
+    ```
+
+    Tabelis \@ref(tab:molar-masses) leheküljel `r render_pageref(reference = "tab:molar-masses")` on esitatud vajalikud molaarmassid.
+
+    ```{r label = "molar-masses", echo=FALSE, eval=TRUE}
+    librarian::shelf(c(
+      "kableExtra"
+    ))
+
+    relative_atomic_masses <- c(
+      1.008,
+      12.01,
+      16
+    )
+
+    relative_atomic_masses_with_footnotes <- paste(relative_atomic_masses, footnote_marker_number(1:3))
+
+    molar_masses <- convert_from_Ar_to_M(relative_atomic_masses)
+
+    table_of_molar_masses <- data.frame(
+      relative_atomic_masses_with_footnotes = relative_atomic_masses_with_footnotes,
+      molar_masses = molar_masses
+    )
+
+    colnames(table_of_molar_masses) <- c(
+      "Suhteline aatommass",
+      "$\\frac{\\text{Molaarmass}}{\\unit{\\kg\\per\\mol}}$"
+    )
+
+    rownames(table_of_molar_masses) <- c(
+      "$\\ce{H}$",
+      "$\\ce{C}$",
+      "$\\ce{O}$"
+    )
+
+    library(knitcitations)
+    bib <- read.bibtex("references.bib")
+    print_table(
+      table = table_of_molar_masses,
+      caption = "Valitud elementide molaarmassid.",
+      digits = 6,
+        footnotes = c(
+          render_with_emojis(text = paste(citep(bib[["haynes_2014_crc"]]), ", lk 4-8", sep = ""), escape = TRUE),
+          render_with_emojis(text = paste(citep(bib[["haynes_2014_crc"]]), ", lk 4-17", sep = ""), escape = TRUE),
+          render_with_emojis(text = paste(citep(bib[["haynes_2014_crc"]]), ", lk 4-25", sep = ""), escape = TRUE)
+      )
+    )
+
+    ```
+
+    ```{r label = "amount-of-C"}
+    relative_atomic_mass_of_C <- relative_atomic_masses[2] * 6 + relative_atomic_masses[1] * 8 + relative_atomic_masses[3] * 6
+    amount_of_C <- mass_of_C_in_bulb / (relative_atomic_mass_of_C)
+
+    ```
+
+    Tiitrimiseks võtsime ilmselt \qty{`r as.character(signif(amount_of_C, digits = 2))`}{\mol} C-vitamiini.
+    
+12. Lasen arvutada kaaliumjodaadi lahuse molaarsuse.
+
+    ```{r label = "calculating-molarity-of-KIO3"}
+    amount_of_KIO3 <- amount_of_C / 3
+    molarity_of_KIO3 <- amount_of_KIO3 / volume_of_KIO3
+
+    ```
+    
+    Kaaliumjodaadi lahuse molaarsus oli \qty{`r as.character(signif(molarity_of_KIO3, digits = 2))`}{\mol\per\l}.
+    
+13. Testimiseks valisime *Suukaudse pihusti C-vitamiini*. Arvutasime selleks vajaliku lahusti mahu:
+    
+    ```{r label = "calculating-volume-of-C-in-spray"}
+    amount_of_KIO3_for_spray <- 10 * molarity_of_KIO3
+    amount_of_C_in_spray <- amount_of_KIO3_for_spray * 3
+    mass_of_C_in_spray_for_titration <- amount_of_C_in_spray * relative_atomic_mass_of_C
+    volume_of_C_in_spray <- mass_of_C_in_spray * 5 / mass_of_C_in_spray_for_titration
+    
+    ```
+    
+    Pihustasime testtoodet \num{`r as.character(number_of_sprays)`} lasku \qty{`r as.character(volume_of_C_in_spray)`}{\ml} vette.
+
+14. Mõõtsime tühja \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
+
+15. Mõõtsime samasse kolbi \qty{`r as.character(volume_of_C)`}{\ml} C-vitamiini sammul \num{13} valmistatud pihustilahust.
+
+16. Kordasime samme \numrange{6}{9}.

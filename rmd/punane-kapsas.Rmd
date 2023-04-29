@@ -26,7 +26,7 @@ Antotsüaniini sisaldus kindlaks tehtud.
 
 ## Reagentide kogused
 
-```{r label = "quantity_of_acid_or_lye"}
+```{r label = "quantity_of_acid_or_lye", echo=FALSE}
 quantity_of_acid_or_lye <- 2
 total_quantity_of_acid_or_lye <- quantity_of_acid_or_lye * 2
 
@@ -58,14 +58,14 @@ Selle töö teostasin Ants-Andre Länsiga:
 
 8.  Kordasime sammu \num{6} kaks korda.
 
-    ```{r label = "quantity-of-cabbage-extract"}
+    ```{r label = "quantity-of-cabbage-extract", echo=FALSE}
     quantity_of_extract <- 5
     
     ```
 
 9.  Mõõtsime tühja eri keeduklaasi välja \qty{`r as.character(quantity_of_extract)`}{\ml} ekstrakti.
 
-    ```{r label = "quantity-of-water-for-coloring"}
+    ```{r label = "quantity-of-water-for-coloring", echo=FALSE}
     quantity_of_water_for_coloring <- 45
     
     ```
@@ -80,7 +80,7 @@ Selle töö teostasin Ants-Andre Länsiga:
 
 14. Kordasime samme \numrange{9}{10}.
 
-    ```{r label = "quantity-of-water-for-comparison"}
+    ```{r label = "quantity-of-water-for-comparison", echo=FALSE}
     quantity_of_water_for_comparison <- quantity_of_extract + quantity_of_water_for_coloring
     
     ```
@@ -113,7 +113,7 @@ Selle töö teostasin Ants-Andre Länsiga:
 
     Terve optilise tiheduse graafik äädikhappega kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage-with-acid) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage-with-acid")`.
     
-    ```{r label = "whole-graph-of-cabbage-with-acid", fig.cap = "Kapsavedeliku ja äädikhappe segu neeldumisspektri täisgraafik."}
+    ```{r label = "whole-graph-of-cabbage-with-acid", fig.cap = "Kapsavedeliku ja äädikhappe segu neeldumisspektri täisgraafik.", echo=FALSE}
     densities_of_cabbage <- readxl::read_excel("rmd/KAPSAS_Lans_Piiskop.xlsx")
     
     librarian::shelf(c(
@@ -128,7 +128,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Müra eemaldatud, olulise osa äädikhappe lisandiga kapsavedeliku optilise tiheduse graafik on näha joonisel \@ref(fig:important-part-of-graph-of-cabbage-with-acid) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-cabbage-with-acid")`.
 
-    ```{r label = "important-part-of-graph-of-cabbage-with-acid", fig.cap = paste("Punase kapsa, mille vedelikku on lisatud äädikhapet, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = "")}
+    ```{r label = "important-part-of-graph-of-cabbage-with-acid", fig.cap = paste("Punase kapsa, mille vedelikku on lisatud äädikhapet, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = ""), echo=FALSE}
     start <- 260
     end <- 700
     subset_of_densities_of_cabbage <- subset(densities_of_cabbage, start < `Wavelength nm.` & end > `Wavelength nm.`)
@@ -140,7 +140,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Mürata jooniselt on näha kolm tippväärtust. Lasen need välja arvutada:
     
-    ```{r label = "peak-indices-for-cabbage-with-acid"}
+    ```{r label = "peak-indices-for-cabbage-with-acid", echo=FALSE}
     librarian::shelf(c(
       "pracma"
     ))
@@ -157,7 +157,7 @@ Selle töö teostasin Ants-Andre Länsiga:
 
     Terve optilise tiheduse graafik leelisega kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage-with-lye) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage-with-lye")`.
     
-    ```{r label = "whole-graph-of-cabbage-with-lye", fig.cap = "Kapsavedeliku ja leelise segu neeldumisspektri täisgraafik."}
+    ```{r label = "whole-graph-of-cabbage-with-lye", fig.cap = "Kapsavedeliku ja leelise segu neeldumisspektri täisgraafik.", echo=FALSE}
     ggplot(data = densities_of_cabbage, aes(x = `Wavelength nm.`, y = `SININE_lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
       labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
 
@@ -165,7 +165,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Müra eemaldatud, olulise osa leelise lisandiga kapsavedeliku optilise tiheduse graafik on näha joonisel \@ref(fig:important-part-of-graph-of-cabbage-with-lye) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-cabbage-with-lye")`.
 
-    ```{r label = "important-part-of-graph-of-cabbage-with-lye", fig.cap = paste("Punase kapsa, mille vedelikku on lisatud leelist, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = "")}
+    ```{r label = "important-part-of-graph-of-cabbage-with-lye", fig.cap = paste("Punase kapsa, mille vedelikku on lisatud leelist, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = ""), echo=FALSE}
     ggplot(data = subset_of_densities_of_cabbage, aes(x = `Wavelength nm.`, y = `SININE_lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
       labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
     
@@ -173,7 +173,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Mürata jooniselt on näha kaks tippväärtust. Lasen need välja arvutada:
     
-    ```{r label = "peak-indices-for-cabbage-with-lye"}
+    ```{r label = "peak-indices-for-cabbage-with-lye", echo=FALSE}
     peak_indices_of_cabbage_with_lye <- findpeaks(subset_of_densities_of_cabbage$`SININE_lahus_g1 - RawData`, npeaks = Inf, peakpat = "[+][0]{0,}[-]")
     
     wave_length_1_of_cabbage_with_lye <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage_with_lye[1, 2]]
@@ -185,7 +185,7 @@ Selle töö teostasin Ants-Andre Länsiga:
 
     Terve optilise tiheduse graafik lisamata happe ja leeliseta kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage")`.
     
-    ```{r label = "whole-graph-of-cabbage", fig.cap = "Kapsavedeliku, millesse pole lisatud hapet ega leelist, segu neeldumisspektri täisgraafik."}
+    ```{r label = "whole-graph-of-cabbage", fig.cap = "Kapsavedeliku, millesse pole lisatud hapet ega leelist, segu neeldumisspektri täisgraafik.", echo=FALSE}
     ggplot(data = densities_of_cabbage, aes(x = `Wavelength nm.`, y = `lilla lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
       labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
 
@@ -193,7 +193,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Müra eemaldatud, olulise osa leelise ja happe lisandiga kapsavedeliku optilise tiheduse graafik on näha joonisel \@ref(fig:important-part-of-graph-of-cabbage) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-cabbage")`.
 
-    ```{r label = "important-part-of-graph-of-cabbage", fig.cap = paste("Punase kapsa, mille vedelikku ei olnud lisatud leelist ega hapet, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = "")}
+    ```{r label = "important-part-of-graph-of-cabbage", fig.cap = paste("Punase kapsa, mille vedelikku ei olnud lisatud leelist ega hapet, optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{", start, "}{", end, "}{\\nm}, ääred välja arvatud.", sep = ""), echo=FALSE}
     ggplot(data = subset_of_densities_of_cabbage, aes(x = `Wavelength nm.`, y = `LILLA lilla_lahus_g1 - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
       labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
     
@@ -201,7 +201,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Mürata jooniselt on näha kolm tippväärtust. Lasen need välja arvutada:
     
-    ```{r label = "peak-indices-for-cabbage"}
+    ```{r label = "peak-indices-for-cabbage", echo=FALSE}
     peak_indices_of_cabbage <- findpeaks(subset_of_densities_of_cabbage$`LILLA lilla_lahus_g1 - RawData`, npeaks = Inf, peakpat = "[+][0]{0,}[-]")
     
     wave_length_1_of_cabbage <- subset_of_densities_of_cabbage$`Wavelength nm.`[peak_indices_of_cabbage[1, 2]]

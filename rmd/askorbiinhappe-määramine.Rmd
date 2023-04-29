@@ -36,7 +36,7 @@ C-itamiini sisalduse kontrollimise oskus omandatud.
 
 1.  C-vitamiin,
     
-    ```{r label = "mass-of-c-in-spray"}
+    ```{r label = "mass-of-c-in-spray", echo=FALSE}
     number_of_sprays <- 5
     mass_of_C_in_spray <- 120e-3
     
@@ -74,14 +74,14 @@ C-itamiini sisalduse kontrollimise oskus omandatud.
 
 Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga:
 
-```{r label = "mass-of-C"}
+```{r label = "mass-of-C", echo=FALSE}
 mass_of_C <- 1
 
 ```
 
 1.  Uhmerdasime \num{`r as.character(mass_of_C)`}-\unit{\mg} C-vitamiini sisaldava tableti.
 
-    ```{r label = "volume-of-H2O"}
+    ```{r label = "volume-of-H2O", echo=FALSE}
     volume_of_H2O <- 200
 
     ```
@@ -92,7 +92,7 @@ mass_of_C <- 1
 
 4.  Mõõtsime \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
 
-    ```{r label = "volume-of-C"}
+    ```{r label = "volume-of-C", echo=FALSE}
     volume_of_C <- 5
 
     ```
@@ -189,7 +189,7 @@ mass_of_C <- 1
 
     Näha on, et askorbiinhappe ja dijoodi hulk on ühesugune. Vastavalt võrrandile \@ref(eq:2KIO3-12H-10I) leheküljel `r render_pageref(reference = "eq:2KIO3-12H-10I")` oli kaaliumjodaadi hulk kolmandik dijoodi hulka, mis tähendab, et kaaliumjodaadi hulk oli ühtlasi kolmandik askorbiinhappe hulka.
     
-    ```{r label = "volume-of-KIO3"}
+    ```{r label = "volume-of-KIO3", echo=FALSE}
     volume_of_KIO3 <- 25
     
     ```
@@ -198,14 +198,14 @@ mass_of_C <- 1
 
 11. Lasen arvutada, mitu mooli C-vitamiini võtsime tiitrimiseks:
     
-    ```{r label = "mass-of-C-in-bulb"}
+    ```{r label = "mass-of-C-in-bulb", echo=FALSE}
     mass_of_C_in_bulb <- mass_of_C / volume_of_H2O * volume_of_C
     
     ```
 
     C-vitamiini mass Erlenmeyeri kolbis oli \qty{`r as.character(mass_of_C_in_bulb)`}{\g}.
     
-    ```{r label = "carbon"}
+    ```{r label = "carbon", echo=FALSE}
     M_12C <- .012
     A_12C <- 12
     M_u <- M_12C / A_12C
@@ -222,7 +222,7 @@ mass_of_C <- 1
 
     ```
 
-    ```{r label = "convert-from-Ar-to-M"}
+    ```{r label = "convert-from-Ar-to-M", echo=FALSE}
     convert_from_Ar_to_M <- function(A_r) {
       return(A_r * M_u)
     }
@@ -231,7 +231,7 @@ mass_of_C <- 1
 
     Tabelis \@ref(tab:molar-masses) leheküljel `r render_pageref(reference = "tab:molar-masses")` on esitatud vajalikud molaarmassid.
 
-    ```{r label = "molar-masses", echo=FALSE, eval=TRUE}
+    ```{r label = "molar-masses", echo=FALSE, eval=TRUE, echo=FALSE}
     librarian::shelf(c(
       "kableExtra"
     ))
@@ -277,7 +277,7 @@ mass_of_C <- 1
 
     ```
 
-    ```{r label = "amount-of-C"}
+    ```{r label = "amount-of-C", echo=FALSE}
     relative_atomic_mass_of_C <- relative_atomic_masses[2] * 6 + relative_atomic_masses[1] * 8 + relative_atomic_masses[3] * 6
     amount_of_C <- mass_of_C_in_bulb / (relative_atomic_mass_of_C)
 
@@ -287,7 +287,7 @@ mass_of_C <- 1
     
 12. Lasen arvutada kaaliumjodaadi lahuse molaarsuse.
 
-    ```{r label = "calculating-molarity-of-KIO3"}
+    ```{r label = "calculating-molarity-of-KIO3", echo=FALSE}
     amount_of_KIO3 <- amount_of_C / 3
     molarity_of_KIO3 <- amount_of_KIO3 / volume_of_KIO3
 
@@ -297,7 +297,7 @@ mass_of_C <- 1
     
 13. Testimiseks valisime *Suukaudse pihusti C-vitamiini*. Lasen arvutada selleks vajaliku lahusti mahu arvestades, et muud kogused jäävad samaks:
     
-    ```{r label = "calculating-volume-of-C-in-spray"}
+    ```{r label = "calculating-volume-of-C-in-spray", echo=FALSE}
     volume_of_KIO3_for_spray <- 10
     mass_limit_for_C_in_spray_in_bulb <- volume_of_KIO3_for_spray * mass_of_C_in_bulb / volume_of_KIO3
     mass_of_C_in_spray_in_bulb <- mass_limit_for_C_in_spray_in_bulb / 2
@@ -310,7 +310,7 @@ mass_of_C <- 1
 
 14. Mõõtsime tühja \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
     
-    ```{r label = "volume-of-C-in-spray-for-titration"}
+    ```{r label = "volume-of-C-in-spray-for-titration", echo=FALSE}
     actual_mass_of_C_in_spray_in_bulb <- 10e-3
     volume_of_C_in_spray_for_titration <- actual_mass_of_C_in_spray_in_bulb * actual_volume_of_C_in_spray  / mass_of_C_in_spray
     
@@ -322,7 +322,7 @@ mass_of_C <- 1
 
 17. Kolbi valmistatud lahust tiitrisime \qty{`r as.character(volume_of_KIO3_for_spray)`}{\ml} kaaliumjodaadiga.
     
-    ```{r label = "volume-of-KIO3-for-spray-used"}
+    ```{r label = "volume-of-KIO3-for-spray-used", echo=FALSE}
     volume_of_KIO3_for_spray_used <- 6.4
     
     ```
@@ -331,7 +331,7 @@ mass_of_C <- 1
     
 18. Lasen arvutada meie väljaselgitatud C-vitamiini koguse viies pihustidoosis ja võrdlen pakendile märgituga:
     
-    ```{r label = "ratio-of-mass-of-C-experimental-to-theoretical"}
+    ```{r label = "ratio-of-mass-of-C-experimental-to-theoretical", echo=FALSE}
     ratio_of_mass_of_C_experimental_to_theoretical <- mass_of_C_in_bulb / volume_of_KIO3 * volume_of_KIO3_for_spray_used / actual_mass_of_C_in_spray_in_bulb
     
     ```

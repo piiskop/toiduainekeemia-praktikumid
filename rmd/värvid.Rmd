@@ -40,7 +40,7 @@
 
 ## Reagentide kogused
 
-```{r label = "mass-of-carrot"}
+```{r label = "mass-of-carrot", echo=FALSE}
 mass_of_carrot <- .91
 
 ```
@@ -49,7 +49,7 @@ mass_of_carrot <- .91
 
 2.  \qty{4,9}{\g} veevaba \ce{Na_2SO_4} porgandi jaoks,
 
-    ```{r label = "hexane-for-carrot"}
+    ```{r label = "hexane-for-carrot", echo=FALSE}
     quantity_of_hexane_for_carrot_1 <- 5
     quantity_of_hexane_for_carrot_2 <- 8 + 2.5 + 2.5 + 3
     quantity_of_hexane_for_carrot_3 <- 6
@@ -59,7 +59,7 @@ mass_of_carrot <- .91
 
 3.  \qty{`r as.character(quantity_of_hexane_for_carrot)`}{\ml} heksaani porgandi jaoks,
 
-    ```{r label = "mass-of-bell-pepper"}
+    ```{r label = "mass-of-bell-pepper", echo=FALSE}
     mass_of_bell_pepper <- .9
 
     ```
@@ -68,7 +68,7 @@ mass_of_carrot <- .91
 
 5. \qty{4,7}{\g} veevaba \ce{Na_2SO_4} paprika jaoks,
 
-    ```{r label = "hexane-for-bell-pepper"}
+    ```{r label = "hexane-for-bell-pepper", echo=FALSE}
     quantity_of_hexane_for_bell_pepper_1 = 8.8
     quantity_of_hexane_for_bell_pepper_2 = 5.2
     quantity_of_hexane_for_bell_pepper_3 = 6
@@ -107,7 +107,7 @@ Selle töö teostasin Ants-Andre Länsiga:
 
 12. Filtrisime mõõtesilindrisse. Lõpetasime filtrimise, sest uhmris enam väga kollast värvust ei paistnud.
 
-    ```{r label = "quantity-of-extract"}
+    ```{r label = "quantity-of-extract", echo=FALSE}
     quantity_of_extract <- 18
     
     ```
@@ -150,7 +150,7 @@ Selle töö teostasin Ants-Andre Länsiga:
 
 31. Täitsime mõõteküveti punktis 13 väljamõõdetud ekstraktiga.
     
-    ```{r label = "optical-density-of-carrot"}
+    ```{r label = "optical-density-of-carrot", echo=FALSE}
     densities <- readxl::read_excel("rmd/Kollane paprika ja kollane porgand_Lans_Piiskop.xlsx")
     
     min_wave_length <- min(densities$`Wavelength nm.`)
@@ -178,7 +178,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-carrot) leheküljel `r render_pageref(reference = "fig:whole-graph-of-carrot")`.
     
-    ```{r label = "whole-graph-of-carrot", fig.cap = "Kollase porgandi optilise tiheduse terve graafik."}
+    ```{r label = "whole-graph-of-carrot", fig.cap = "Kollase porgandi optilise tiheduse terve graafik.", echo=FALSE}
     
     librarian::shelf(c(
       "ggplot2",
@@ -192,7 +192,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Müra eemaldatud, olulise osa graafik on näha joonisel \@ref(fig:important-part-of-graph-of-carrot) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-carrot")`.
     
-    ```{r label = "important-part-of-graph-of-carrot", fig.cap = "Kollase porgandi optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{400}{500}{\\nm}, ääred välja arvatud."}
+    ```{r label = "important-part-of-graph-of-carrot", fig.cap = "Kollase porgandi optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{400}{500}{\\nm}, ääred välja arvatud.", echo=FALSE}
     subset_of_densities <- subset(densities, 400 < `Wavelength nm.` & 500 > `Wavelength nm.`)
 
     ggplot(data = subset_of_densities, aes(x = `Wavelength nm.`, y = `kollane porgand - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
@@ -202,7 +202,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Mürata jooniselt on näha kaks tippväärtust. Lasen need välja arvutada:
     
-    ```{r label = "peak-indices-for-carrot"}
+    ```{r label = "peak-indices-for-carrot", echo=FALSE}
     librarian::shelf(c(
       "pracma"
     ))
@@ -246,7 +246,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Lasen arvutada $\beta$-karoteeni sisalduse lainepikkuse \qty{450}{\nm} korral:
     
-    ```{r label = "calculation-of-beta-carotene-for-carrot"}
+    ```{r label = "calculation-of-beta-carotene-for-carrot", echo=FALSE}
     absorption_at_450_nm <- subset(subset_of_densities, 450 == `Wavelength nm.`)
     
     #' This function calculates the content of β-Carotene.
@@ -272,7 +272,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-bell-pepper) leheküljel `r render_pageref(reference = "fig:whole-graph-of-bell-pepper")`.
     
-    ```{r label = "whole-graph-of-bell-pepper", fig.cap = "Kollase paprika optilise tiheduse terve graafik."}
+    ```{r label = "whole-graph-of-bell-pepper", fig.cap = "Kollase paprika optilise tiheduse terve graafik.", echo=FALSE}
     ggplot(data = densities, aes(x = `Wavelength nm.`, y = `kollane paprika - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
       labs(x = TeX("$\\frac{lainepikkus}{nm}$"), y = "optiline tihedus")
 
@@ -280,7 +280,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Müra eemaldatud, olulise osa graafik on näha joonisel \@ref(fig:important-part-of-graph-of-bell-pepper) leheküljel `r render_pageref(reference = "fig:important-part-of-graph-of-bell-pepper")`.
     
-    ```{r label = "important-part-of-graph-of-bell-pepper", fig.cap = "Kollase paprika optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{400}{500}{\\nm}, ääred välja arvatud."}
+    ```{r label = "important-part-of-graph-of-bell-pepper", fig.cap = "Kollase paprika optilise tiheduse graafik ilma mürata ehk lainepikkuste vahemikus \\qtyrange{400}{500}{\\nm}, ääred välja arvatud.", echo=FALSE}
     subset_of_densities <- subset(densities, 400 < `Wavelength nm.` & 500 > `Wavelength nm.`)
 
     ggplot(data = subset_of_densities, aes(x = `Wavelength nm.`, y = `kollane paprika - RawData`)) + geom_point(shape = 23, color = "#008000", fill = "#ff6600", size = 3) +
@@ -290,7 +290,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Mürata jooniselt on näha kaks tippväärtust. Lasen need välja arvutada:
     
-    ```{r label = "peak-indices-for-bell-pepper"}
+    ```{r label = "peak-indices-for-bell-pepper", echo=FALSE}
     librarian::shelf(c(
       "pracma"
     ))
@@ -308,7 +308,7 @@ Selle töö teostasin Ants-Andre Länsiga:
     
     Lasen arvutada $\beta$-karoteeni sisalduse lainepikkuse \qty{450}{\nm} korral:
     
-    ```{r label = "calculation-of-beta-carotene-for-bell-pepper"}
+    ```{r label = "calculation-of-beta-carotene-for-bell-pepper", echo=FALSE}
     absorption_at_450_nm <- subset(subset_of_densities, 450 == `Wavelength nm.`)
 
     K_of_bell_pepper <- calculate_K(A = absorption_at_450_nm$`kollane paprika - RawData`, V = quantity_of_extract, g = mass_of_bell_pepper)

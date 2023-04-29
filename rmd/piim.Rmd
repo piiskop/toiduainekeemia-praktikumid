@@ -42,7 +42,7 @@ Töö teostasin Ants-Andre Länsiga:
 
 1.  Kaalusime \num{50}-\unit{\ml} keeduklaasi:
 
-    ```{r label = "beaker-for-milk"}
+    ```{r label = "beaker-for-milk", echo=FALSE}
     mass_of_beaker_for_milk <- 37.79
 
     ```
@@ -53,7 +53,7 @@ Töö teostasin Ants-Andre Länsiga:
 
 3.  Kaalusime klaasi koos piimaga:
 
-    ```{r label = "beaker-with-milk"}
+    ```{r label = "beaker-with-milk", echo=FALSE}
     mass_of_beaker_with_milk <- 51.71
 
     ```
@@ -62,7 +62,7 @@ Töö teostasin Ants-Andre Länsiga:
    
 4.  Lasen arvutada piima massi:
 
-    ```{r label = "mass-of-milk"}
+    ```{r label = "mass-of-milk", echo=FALSE}
     mass_of_milk <- mass_of_beaker_with_milk - mass_of_beaker_for_milk
     
     ```
@@ -85,7 +85,7 @@ Töö teostasin Ants-Andre Länsiga:
 
 11. Kaalusime rasvata piimaga klaasi:
 
-    ```{r label = "mass-of-milk-without-fat-in-beaker"}
+    ```{r label = "mass-of-milk-without-fat-in-beaker", echo=FALSE}
     mass_of_milk_without_fat_in_beaker <- 50.99
     mass_of_milk_without_fat <- mass_of_milk_without_fat_in_beaker - mass_of_beaker_for_milk
     
@@ -95,7 +95,7 @@ Töö teostasin Ants-Andre Länsiga:
     
 12. Lasen arvutada rasva koguse:
 
-    ```{r label = "mass-of-fat"}
+    ```{r label = "mass-of-fat", echo=FALSE}
     mass_of_fat <- mass_of_milk - mass_of_milk_without_fat
     
     ```
@@ -104,7 +104,7 @@ Töö teostasin Ants-Andre Länsiga:
     
 13. Lasen arvutada rasvasisalduse:
 
-    ```{r label = "fat-percent-in-milk"}
+    ```{r label = "fat-percent-in-milk", echo=FALSE}
     experimental_fat_percent_in_milk <- mass_of_fat / mass_of_milk * 100
     
     ```
@@ -113,7 +113,7 @@ Töö teostasin Ants-Andre Länsiga:
 
 14. Lasen arvutada meie väljaselgitatud piima rasvasisalduse ja pakendile märgitud piima rasvasisalduse suhtelise erinevuse:
 
-    ```{r label = "fat-percent-difference-in-milk"}
+    ```{r label = "fat-percent-difference-in-milk", echo=FALSE}
     theoretical_fat_percent_in_milk <- 2.5
     fat_percent_difference_in_milk <- (theoretical_fat_percent_in_milk - experimental_fat_percent_in_milk) / theoretical_fat_percent_in_milk
     
@@ -157,7 +157,7 @@ Piima valgusisaldus kontrollitud.
 
 1.  \num{30} tilka äädikhapet,
 
-    ```{r label = "NaOH"}
+    ```{r label = "NaOH", echo=FALSE}
     quantity_of_NaOH_per_tube <- 2
     number_of_tubes <- 3
     quantity_of_NaOH <- number_of_tubes * quantity_of_NaOH_per_tube
@@ -166,7 +166,7 @@ Piima valgusisaldus kontrollitud.
 
 2.  \qty{`r as.character(quantity_of_NaOH)`}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust ja
 
-    ```{r label = "CuSO4"}
+    ```{r label = "CuSO4", echo=FALSE}
     min_quantity_of_CuSO4_per_tube <- 1
     max_quantity_of_CuSO4_per_tube <- 2
     min_quantity_of_CuSO4 <- number_of_tubes * min_quantity_of_CuSO4_per_tube

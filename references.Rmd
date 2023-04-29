@@ -4,5 +4,3 @@
 
 \hyphenpenalty=10000
 \fontspec{Source Han Serif}
-
-(ref:haynes-2014-crc) @haynes_2014_crc

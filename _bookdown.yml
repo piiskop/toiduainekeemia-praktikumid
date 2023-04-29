@@ -8,5 +8,6 @@ rmd_files: [
   "rmd/liha.Rmd",
   "rmd/piim.Rmd",
   "rmd/askorbiinhappe-määramine.Rmd",
+  "rmd/invertsuhkur.Rmd",
   "references.Rmd"
 ]

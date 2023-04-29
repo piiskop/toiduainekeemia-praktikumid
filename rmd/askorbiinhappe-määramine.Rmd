@@ -6,7 +6,7 @@
 
 ## Töö eesmärk
 
-C-itamiini sisalduse kontrollimise oskus omandatud.
+C-vitamiini sisalduse kontrollimise oskus omandatud.
 
 ## Kasutatud töövahendid
 

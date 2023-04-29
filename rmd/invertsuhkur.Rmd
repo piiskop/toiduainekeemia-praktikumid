@@ -1,0 +1,231 @@
+# Invertsuhkur
+
+## Kuupäevad
+
+2023-03-22 ja 2023-03-29
+
+## Töö eesmärk
+
+Lauasuhkru inverteerimise ja inverteerunud sahharoosi koguse määramise oskus omandatud.
+
+## Kasutatud töövahendid
+
+1. Elektrooniline kaal,
+
+2. lehtrid,
+
+3. filterpaber,
+
+4.  \num{50}-\unit{\ml} bürett,
+
+    ```{r label = "volume-of-measuring-beaker", echo = FALSE}
+    volume_of_measuring_beaker <- 250
+    
+    ```
+
+5. \num{`r as.character(volume_of_measuring_beaker)`}-\unit{\ml} mõõtkolb,
+
+6. elektripliit,
+
+7. mahtpipett,
+
+8. \num{400}-\unit{\ml} keeduklaas,
+
+9. \num{250}-\unit{\ml} keeduklaas,
+
+10. veel üks keeduklaas,
+
+11. Pasteur'i pipetid ja
+
+12. spaatlid.
+
+## Reagentide kogused
+
+```{r label = "quantity-of-water", echo = FALSE}
+volume_of_water_for_kissel <- 150
+volume_of_BaOH2 <- 30
+volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - volume_of_BaOH2
+
+```
+
+1.  \qty{`r as.character(volume_of_water)`}{\ml} vett,
+
+    ```{r label = "m-sachharose", echo = FALSE}
+    m_sachharose <- 9.02
+    
+    ```
+
+2. \qty{9,02}{\g} sahharoosi,
+
+3. \qty{10}{\ml} \num{6}-\unit{\percent} sidrunhapet,
+
+4. \qty{50}{\ml} kartulitärklise suspensiooni,
+
+5. \qty{`r as.character(volume_of_BaOH2)`}{\ml} \ce{Ba(OH)2},
+
+6. \qty{20}{\ml} \num{1}-\unit{\percent} \ce{K3Fe(CN)6},
+
+7. \numrange{1}{2} tilka metüleensinist ja
+
+8. \qty{5}{\ml} \num{2.5}-\unit{\mol\per\l} \ce{NaOH}
+
+## Töö käik
+
+1.  Kaalusime keeduklaasi.
+    
+    ```{r label = "mass-of-beaker", echo = FALSE}
+    mass_of_beaker <- 124.48
+    
+    ```
+    
+    Keeduklaasi mass on \qty{`r as.character(mass_of_beaker)`}{\g}.
+    
+2. Valasime keeduklaasi \qty{`r as.character(volume_of_water_for_kissel)`}{\ml} vett.
+
+3. Lisasime suhkru.
+
+4. Lisasime sidrunhappe.
+
+5. Ajasime lahuse keema.
+
+6. Lisasime tärklise peenikese nirena samaaegselt segades vältimaks klompide teket.
+
+7. Segu keetsime ühe minuti või esimese mulli tekkeni.
+
+8. Võtsime kisselli pliidilt ja panime selle jahtuma külma vesivanni.
+
+9. Kuivatasime keeduklaasi väljastpoolt.
+
+10. Kaalusime keeduklaasi koos kisselliga.
+
+11. Lasen arvutada saadud kisselli massi.
+    
+    ```{r label = "mass-of-kissel", echo = FALSE}
+    mass_of_beaker_with_kissel <- 332.22
+    mass_of_kissel <- mass_of_beaker_with_kissel - mass_of_beaker
+    
+    ```
+    
+    Kisselli mass oli \qty{`r as.character(mass_of_kissel)`}{\g}.
+    
+    ```{r label = "mass-of-kissel-for-titration", echo = FALSE}
+    mass_of_kissel_for_titration <- 20.28
+    
+    ```
+    
+12. Mõõtkolbi kaalusime \qty{`r as.character(mass_of_kissel_for_titration)`}{\g} kisselli.
+
+13. Lisasime \qty{170}{\ml} vett.
+
+14. Loksutasime ühtlase lahuse tekkeni.
+
+15. Lisasime baariumhüdroksiidi.
+
+16. Täitsime kolbi veega mõõtejooneni.
+    
+17. Loksutasime.
+
+18. Jätsime seisma, kuni tärklise sade oli langenud kolvi põhja.
+
+19. Lahuse filtrisime läbi kuiva voltfiltri tühja keeduklaasi.
+
+20. Täitsime büreti filtritud kisselli lahusega.
+
+21. Tühja \num{250}-\unit{\ml} keeduklaasi pipeteerisime \ce{K3Fe(CN)6}.
+
+22. Lisasime metüleensinise.
+
+23. Lisasime naatriumhüdroksiidi.
+
+24. Ajasime lahuse elektripliidil keema.
+
+25. Tiitrisime lahust kisselliga, kuni see muutus õrnroosaks.
+
+26. Lasen arvutada invertsuhkru sisalduse kissellis kasutades valemit \@ref(eq:invert-sugar) leheküljel `r render_pageref(reference = "eq:invert-sugar")`.
+    
+    ```{=tex}
+    \begin{align}
+    X &= \frac{(2,012 \times 10 + 3,5 \times 10^{-2} \times V) \times V_\text{total}}{10 \times 10^2 \times V \times m}\\
+    &= \frac{(2,012 + 3,5 \times 10^{-3} \times V) \times V_\text{total}}{10^2 \times V \times m},
+    (\#eq:invert-sugar)
+    \end{align}
+    
+    ```
+    
+    milles
+    
+    $X$
+    : invertsuhkru sisaldus kissellis,
+    
+    $\frac{V}{\unit{\ml}}$
+    : tiitrimiseks kulunud suhkrulahuse maht,
+    
+    $\frac{V_\text{total}}{\unit{\ml}}$
+    : kogulahuse maht ja
+    
+    $\frac{m}{\unit{\g}}$
+    : proovi mass kogulahuses.
+    
+    ```{r label = "X", echo = FALSE}
+    volume_of_titrate <- 15.4
+    X <- ((2.012 + 3.5 * volume_of_titrate * 1e-3) * volume_of_measuring_beaker) / (1e2 * volume_of_titrate * mass_of_kissel_for_titration)
+    
+    ```
+    
+    Invertsuhkru sisaldus kissellis oli `r as.character(signif(X, digits = 3))`.
+    
+27. Lasen arvutada inverteerunud sahharoosi sisalduse kissellis kasutades valemit \@ref(eq:X1) leheküljel `r render_pageref(reference = "eq:X1")`.
+    
+    ```{=tex}
+    \begin{align}
+    X_1 = X \times 0,95,
+    (\#eq:X1)
+    \end{align}
+    
+    ```
+    
+    milles
+    
+    $X_1$
+    : inverteerunud sahharoosi sisaldus kissellis.
+    
+    ```{r label = "X_1", echo = FALSE}
+    X_1 <- X * .95
+    
+    ```
+    
+    Inverteerunud sahharoosi sisaldus kissellis oli `r as.character(signif(X_1, digits = 3))`.
+    
+28. Lasen arvutada, milline osa sahharoosi allus inversioonile kasutades valemit \@ref(eq:Y) leheküljel `r render_pageref(reference = "eq:Y")`.
+    
+    ```{=tex}
+    \begin{align}
+    Y = \frac{X_1 \cdot m_\text{kissel}}{m_\text{sachharose}},
+    (\#eq:Y)
+    \end{align}
+    
+    ```
+    
+    milles
+    
+    $Y$
+    : inverteerunud sahharoosi kogus kogu lisatud sahharoosist,
+    
+    $m_\text{kissel}$
+    : kisselli mass ja
+    
+    $m_\text{sachharose}$
+    : keetmiseks võetud sahharoosi mass.
+    
+    ```{r label = "Y", echo = FALSE}
+    Y <- X_1 * mass_of_kissel / m_sachharose
+    
+    ```
+    
+    Inversioonile allus `r as.character(signif(Y, digits = 2))` sahharoosi.
+    
+## Arutelu
+
+Invertsuhkrul on võrreldes sahharoosiga optiline eripööre täisnurga võrra erinev ja seetõttu nimetatakse sellist suhkrut invertsuhkruks[@a2008_fennemas, lk 105]. Valgus peegeldub invertsuhkrus vastassuunda võrreldes sahharoosiga [@a2020_invert].
+
+Looduses toimub inverteerimine taimede kudedes ja mikroorganismides leiduva invertaasi ensüümi toimel[@a2008_fennemas, lk 371]. Inimese soolestikus katalüüsib ensüüm sukraas sukroosi inverteerimist[@a2008_fennemas, lk 106].

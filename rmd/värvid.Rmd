@@ -4,6 +4,10 @@
 
 2023-03-01
 
+## Teostajad
+
+Töö teostasin Ants-Andre Länsiga.
+
 ## Töö eesmärgid
 
 1. Taimse materjali karoteinoidide ja klorofülli neeldumisspekter määratud.
@@ -81,8 +85,6 @@ mass_of_carrot <- .91
 
 ## Töö käik
 
-Selle töö teostasin Ants-Andre Länsiga:
-
 1. Kaalusime kollase porgandi.
 
 2. Peenestasime proovi noaga.
@@ -151,6 +153,10 @@ Selle töö teostasin Ants-Andre Länsiga:
 31. Täitsime mõõteküveti punktis 13 väljamõõdetud ekstraktiga.
     
     ```{r label = "optical-density-of-carrot", echo=FALSE}
+    librarian::shelf(c(
+      "readxl"
+    ))
+    
     densities <- readxl::read_excel("rmd/Kollane paprika ja kollane porgand_Lans_Piiskop.xlsx")
     
     min_wave_length <- min(densities$`Wavelength nm.`)

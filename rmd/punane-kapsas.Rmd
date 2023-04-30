@@ -4,6 +4,10 @@
 
 2023-03-01
 
+## Teostajad
+
+Töö teostasin Ants-Andre Länsiga.
+
 ## Töö eesmärk
 
 Antotsüaniini sisaldus kindlaks tehtud.
@@ -39,8 +43,6 @@ total_quantity_of_acid_or_lye <- quantity_of_acid_or_lye * 2
 3. \qty{10,4}{\g} punast kapsast.
 
 ## Töö käik
-
-Selle töö teostasin Ants-Andre Länsiga:
 
 1. Kaalusime välja punase kapsa.
 
@@ -114,6 +116,10 @@ Selle töö teostasin Ants-Andre Länsiga:
     Terve optilise tiheduse graafik äädikhappega kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage-with-acid) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage-with-acid")`.
     
     ```{r label = "whole-graph-of-cabbage-with-acid", fig.cap = "Kapsavedeliku ja äädikhappe segu neeldumisspektri täisgraafik.", echo=FALSE}
+    librarian::shelf(c(
+      "readxl"
+    ))
+    
     densities_of_cabbage <- readxl::read_excel("rmd/KAPSAS_Lans_Piiskop.xlsx")
     
     librarian::shelf(c(

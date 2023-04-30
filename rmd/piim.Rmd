@@ -4,6 +4,10 @@
 
 2023-03-15
 
+## Teostajad
+
+Töö teostasin Ants-Andre Länsiga.
+
 ## Rasvasisaldus
 
 ### Töö eesmärk
@@ -37,8 +41,6 @@ Piima rasvasisaldus kontrollitud.
 4. \numrange{2}{3} tilka \num{0,5}-\unit{\percent} \ce{KMnO4}.
 
 ### Töö käik
-
-Töö teostasin Ants-Andre Länsiga:
 
 1.  Kaalusime \num{50}-\unit{\ml} keeduklaasi:
 

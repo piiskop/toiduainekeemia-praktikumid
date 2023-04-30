@@ -4,6 +4,10 @@
 
 2023-03-15
 
+## Teostajad
+
+Töö teostasin Ants-Andre Länsiga.
+
 ## Töö eesmärk
 
 Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
@@ -37,8 +41,6 @@ Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
 \qtyrange{15}{20}{\g} rasvata loomaliha.
 
 ## Töö käik
-
-Töö teostasin Ants-Andre Länsiga:
 
 1. Peenestasime rasvata loomaliha.
 

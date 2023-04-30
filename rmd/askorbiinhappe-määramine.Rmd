@@ -4,6 +4,10 @@
 
 2023-03-22 ja 2023-03-29
 
+## Teostajad
+
+Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga.
+
 ## Töö eesmärk
 
 C-vitamiini sisalduse kontrollimise oskus omandatud.
@@ -71,8 +75,6 @@ C-vitamiini sisalduse kontrollimise oskus omandatud.
 7. vesi.
     
 ## Töö käik
-
-Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga:
 
 ```{r label = "mass-of-C", echo=FALSE}
 mass_of_C <- 1
@@ -262,7 +264,9 @@ mass_of_C <- 1
       "$\\ce{O}$"
     )
 
-    library(knitcitations)
+    librarian::shelf(c(
+      "knitcitations"
+    ))
     bib <- read.bibtex("references.bib")
     print_table(
       table = table_of_molar_masses,

@@ -4,6 +4,10 @@
 
 2023-03-22 ja 2023-03-29
 
+## Teostajad
+
+Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga.
+
 ## Töö eesmärk
 
 Lauasuhkru inverteerimise ja inverteerunud sahharoosi koguse määramise oskus omandatud.

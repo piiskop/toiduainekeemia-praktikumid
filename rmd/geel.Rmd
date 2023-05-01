@@ -1,0 +1,135 @@
+# Geelpallikesed
+
+## Kuupäevad
+
+2023-03-29
+
+## Teostajad
+
+Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga.
+
+## Töö eesmärk
+
+Alginaadist geeli tegemise oskus omandatud.
+
+## Kasutatud töövahendid
+
+1. Neli keeduklaasi,
+
+2. mõõtesilinder,
+
+3. magnetsegajaga pliit,
+
+4. klaaspulk, 
+
+5. pipett ja
+
+6. filter.
+
+## Reagentide kogused
+
+1. \qty{0,001}{\kg} naatriumalginaati,
+
+2. \qty{50}{\ml} \num{2}-\unit{\percent} \ce{CaCl2} tühjas keeduklaasis,
+
+3. \qty{50}{\ml} \num{20}-\unit{\percent} \ce{CaCl2} tühjas keeduklaasis ja
+
+4. \qty{50}{\ml} vett.
+
+## Töö käik
+
+```{r label = "V-NaAlg"}
+V_NaAlg <- 20e-6
+ratio_NaAlg <- 1e-2
+
+```
+
+1.  Lasen arvutada, kui palju on vaja naatriumalginaati \num{`r as.character(ratio_NaAlg)`}-osase \qty{`r as.character(V_NaAlg)`}{\m\cubed} lahuse valmistamiseks. See lahus peab koosnema kahest osast: naatriumalginaadist ja veest. Kui lahuse ruumala on $V$, siis naatriumalginaadi osa on $V_\text{\ce{NaAlg}}$[@sodium] ja vee osa $V - V_\text{\ce{NaAlg}}$. Massi arvutamiseks ruumala ja tiheduse järgi kasutan valemit \@ref(eq:mass-concentration) leheküljel `r render_pageref(reference = "eq:mass-concentration")`.
+
+    ```{=tex}
+    \begin{align}
+    γ_\mathrm{B} := \frac{m_\mathrm{B}}{V},
+    (\#eq:mass-concentration)
+    \end{align}
+    
+    ```
+
+    milles
+    
+    $m_\mathrm{B}$
+    : aine B mass ja
+    
+    $V$
+    : ruumala[@haynes_2014_crc, p. 2-8].
+
+    Selle valemi dimensionaalanalüüs on esitatud avaldisena \@ref(eq:dimensional-analysis-for-mass-concentration) leheküljel `r render_pageref(reference = "eq:dimensional-analysis-for-mass-concentration")`, millest johtuvalt on ühik $\unit{\kilogram\per\cubic\metre}$.
+
+    ```{=tex}
+    \begin{align}
+    \mathrm{\frac{M}{L^3}},
+    (\#eq:dimensional-analysis-for-mass-concentration)
+    \end{align}
+    
+    ```
+
+    Seega on vajalik naatriumalginaadi mass $γ_\text{\ce{NaAlg}} \cdot V_\text{\ce{NaAlg}}$ ja vee mass $γ_\text{\ce{H2O}} \cdot (V - V_\text{\ce{NaAlg}})$. Nende ainete masside summa $γ_\text{\ce{NaAlg}} \cdot V_\text{\ce{NaAlg}} + γ_\text{\ce{H2O}} \cdot (V - V_\text{\ce{NaAlg}})$. Naatriumalginaadi osa lahuses massi järgi on esitatud avaldises \@ref(eq:sum-of-masses) leheküljel `r render_pageref(reference = "eq:sum-of-masses")`.
+    
+    ```{=tex}
+    \begin{align}
+    \frac{γ_\text{\ce{NaAlg}} \cdot V_\text{\ce{NaAlg}}}{γ_\text{\ce{NaAlg}} \cdot V_\text{\ce{NaAlg}} + γ_\text{\ce{H2O}} \cdot (V - V_\text{\ce{NaAlg}})} = \frac{m_\text{\ce{NaAlg}}}{m}.
+    (\#eq:sum-of-masses)
+    \end{align}
+    
+    ```
+    
+    Avaldan sellest seosest naatriumalginaadi ruumala  seoses \@ref(eq:V-NaAlg) leheküljel `r render_pageref(reference = "eq:V-NaAlg")`.
+    
+    ```{=tex}
+    \begin{landscape}
+    \begin{align}
+    γ_\text{\ce{NaAlg}} \cdot V_\text{\ce{NaAlg}} = γ_\text{\ce{NaAlg}} \cdot V_\text{\ce{NaAlg}} \cdot \frac{m_\text{\ce{NaAlg}}}{m} + γ_\text{\ce{H2O}} \cdot V \cdot \frac{m_\text{\ce{NaAlg}}}{m} - γ_\text{\ce{H2O}} \cdot V_\text{\ce{NaAlg}} \cdot \frac{m_\text{\ce{NaAlg}}}{m},\\
+    V_\text{\ce{NaAlg}} \cdot (γ_\text{\ce{NaAlg}} - γ_\text{\ce{NaAlg}} \cdot \frac{m_\text{\ce{NaAlg}}}{m} + γ_\text{\ce{H2O}} \cdot \frac{m_\text{\ce{NaAlg}}}{m}) = γ_\text{\ce{H2O}} \cdot V \cdot \frac{m_\text{\ce{NaAlg}}}{m},\\
+    V_\text{\ce{NaAlg}} = \frac{γ_\text{\ce{H2O}} \times V \times \frac{m_\text{\ce{NaAlg}}}{m}}{γ_\text{\ce{NaAlg}} - γ_\text{\ce{NaAlg}} \times \frac{m_\text{\ce{NaAlg}}}{m} + γ_\text{\ce{H2O}} \times \frac{m_\text{\ce{NaAlg}}}{m}} =\\
+    \frac{γ_\text{\ce{H2O}} \times V \times \frac{m_\text{\ce{NaAlg}}}{m}}{γ_\text{\ce{NaAlg}} \times (1 - \frac{m_\text{\ce{NaAlg}}}{m}) + γ_\text{\ce{H2O}} \times \frac{m_\text{\ce{NaAlg}}}{m}}.
+    (\#eq:V-NaAlg)
+    \end{align}
+    \end{landscape}
+    
+    ```
+    
+    Massitiheduse kaudu valemist \@ref(eq:mass-concentration) leheküljel `r render_pageref(reference = "eq:mass-concentration")` avaldan naatriumalginaadi ruumalast massi avaldises \@ref(eq:m-NaAlg) leheküljel `r render_pageref(reference = "eq:m-NaAlg")`.
+
+    ```{=tex}
+    \begin{align}
+    m_\text{\ce{NaAlg}} = \frac{γ_\text{\ce{NaAlg}} \times γ_\text{\ce{H2O}} \times V \times \frac{m_\text{\ce{NaAlg}}}{m}}{γ_\text{\ce{NaAlg}} \times (1 - \frac{m_\text{\ce{NaAlg}}}{m}) + γ_\text{\ce{H2O}} \times \frac{m_\text{\ce{NaAlg}}}{m}}.
+    (\#eq:m-NaAlg)
+    \end{align}
+    
+    ```
+
+    ```{r label = "gamma-NaAlg"}
+    gamma_NaAlg <- 1e3
+    gamma_H2O <- 0.9970470e3
+    
+    ```
+    
+    Naatriumalginaadi tihedus temperatuuril \qty{25}{\degreeCelsius} on \qty{`r as.character(gamma_NaAlg)`}{\kg\per\m\cubed}. Vee tihedus samal temperatuuril on \qty{`r as.character(gamma_H2O)`}{\kg\per\m\cubed}[@haynes_2014_crc, lk 6-8]. Lasen arvutada vajaliku naatriumalginaadi ja vee massi.
+    
+    ```{r label = "m_NaAlg"}
+    ratio_H2O <- 1 - ratio_NaAlg
+    m_NaAlg <- gamma_NaAlg * gamma_H2O * V_NaAlg * ratio_NaAlg / (gamma_NaAlg * ratio_H2O + gamma_H2O * ratio_NaAlg)
+    m_H2O <- m_NaAlg * ratio_H2O / ratio_NaAlg
+    
+    ```
+
+    Kaalusime vett tühja keeduklaasi \qty{`r as.character(m_H2O)`}{\kg}. Lisasime naatriumalginaati \qty{`r as.character(m_NaAlg)`}{\kg}.
+
+2. Kuumutasime naatriumalginaadi lahuse pliidil magnetsegajaga segades.
+
+3. Lisasime pipetiga naatriumalginaati vaheldumisi kummassegi kaaliumkloriidi lahusesse, kuni tekkisid läbipaistvad pallikesed. \num{20}-\unit{\percent} lahuses tekkisid pallikesed kiiremini.
+
+4. Filtrisime kõik läbipaistvad pallikesed tühja keeduklaasi loputades samaaegselt veega.
+
+## Arutelu
+
+Naatriumalginaat on polüsahhariid, mille segamisel kaltsiumsoolaga moodustuvad geeljad pallikesed, sest kaltsium asendab naatriumi naatriumalginaadi molekulides ja ühendab need molekulid.

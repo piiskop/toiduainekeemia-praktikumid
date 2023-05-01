@@ -3,12 +3,13 @@ new_session: false
 delete_merged_file: true
 rmd_files: [
   "index.Rmd",
-  # "rmd/värvid.Rmd",
-  # "rmd/punane-kapsas.Rmd",
-  # "rmd/liha.Rmd",
-  # "rmd/piim.Rmd",
-  # "rmd/askorbiinhappe-määramine.Rmd",
-  # "rmd/invertsuhkur.Rmd",
+  "rmd/värvid.Rmd",
+  "rmd/punane-kapsas.Rmd",
+  "rmd/liha.Rmd",
+  "rmd/piim.Rmd",
+  "rmd/askorbiinhappe-määramine.Rmd",
+  "rmd/invertsuhkur.Rmd",
   "rmd/geel.Rmd",
+  "rmd/agaroos.Rmd",
   "references.Rmd"
 ]

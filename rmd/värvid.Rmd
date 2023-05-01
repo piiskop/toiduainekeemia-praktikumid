@@ -2,11 +2,13 @@
 
 ## Kuupäev
 
-2023-03-01
+2023-03-01.
 
 ## Teostajad
 
-Töö teostasin Ants-Andre Länsiga.
+1. Ants-Andre Läns ja
+
+2. peacecop kalmer:.
 
 ## Töö eesmärgid
 
@@ -85,72 +87,72 @@ mass_of_carrot <- .91
 
 ## Töö käik
 
-1. Kaalusime kollase porgandi.
+1. Kaaluti kollane porgand.
 
-2. Peenestasime proovi noaga.
+2. Peenestati proov noaga.
 
-3. Hakitud proovi asetasime uhmrisse koos väikese koguse pestud liivaga.
+3. Hakitud proov asetati uhmrisse koos väikese koguse pestud liivaga.
 
-4. Uhmerdasime kuni ühtlase massi saamiseni.
+4. Uhmerdati kuni ühtlase massi saamiseni.
 
-5. Lisasime uhmrisse naatriumsulfaadi.
+5. Lisati uhmrisse naatriumsulfaat.
 
-6. Jätkasime massi hõõrumist.
+6. Jätkati massi hõõrumist.
 
-7. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_carrot_1)`}{\ml} heksaani.
+7. Peenestatud massile lisati \qty{`r as.character(quantity_of_hexane_for_carrot_1)`}{\ml} heksaani.
 
-8. Segasime hoolikalt spaatliga.
+8. Segati hoolikalt spaatliga.
 
-9. Lisasime \qty{`r as.character(quantity_of_hexane_for_carrot_2)`}{\ml} heksaani.
+9. Lisati \qty{`r as.character(quantity_of_hexane_for_carrot_2)`}{\ml} heksaani.
 
-10. Filtrisime mõõtesilindrisse.
+10. Filtriti mõõtesilindrisse.
 
-11. Lisasime \qty{`r as.character(quantity_of_hexane_for_carrot_3)`}{\ml} heksaani.
+11. Lisati \qty{`r as.character(quantity_of_hexane_for_carrot_3)`}{\ml} heksaani.
 
-12. Filtrisime mõõtesilindrisse. Lõpetasime filtrimise, sest uhmris enam väga kollast värvust ei paistnud.
+12. Filtriti mõõtesilindrisse. Lõpetati filtrimine, sest uhmris enam väga kollast värvust ei paistnud.
 
     ```{r label = "quantity-of-extract", echo=FALSE}
     quantity_of_extract <- 18
     
     ```
 
-13. Mõõtsime mõõtesilindriga saadud ekstrakti üldmahuks \qty{`r as.character(quantity_of_extract)`}{\ml}.
+13. Mõõdeti mõõtesilindriga saadud ekstrakti üldmahuks \qty{`r as.character(quantity_of_extract)`}{\ml}.
 
-14. Kaalusime kollase paprika.
+14. Kaaluti kollane paprika.
 
-15. Peenestasime proovi noaga.
+15. Peenestati proov noaga.
 
-16. Hakitud proovi asetasime uhmrisse koos väikese koguse pestud liivaga.
+16. Hakitud proov asetati uhmrisse koos väikese koguse pestud liivaga.
 
-17. Uhmerdasime kuni ühtlase massi saamiseni.
+17. Uhmerdati kuni ühtlase massi saamiseni.
 
-18. Lisasime uhmrisse naatriumsulfaadi.
+18. Lisati uhmrisse naatriumsulfaat.
 
-19. Jätkasime massi hõõrumist.
+19. Jätkati massi hõõrumist.
 
-20. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_1)`}{\ml} heksaani.
+20. Peenestatud massile lisati \qty{`r as.character(quantity_of_hexane_for_bell_pepper_1)`}{\ml} heksaani.
 
-21. Segasime hoolikalt spaatliga.
+21. Segati hoolikalt spaatliga.
 
-22. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_2)`}{\ml} heksaani.
+22. Peenestatud massile lisati \qty{`r as.character(quantity_of_hexane_for_bell_pepper_2)`}{\ml} heksaani.
 
-23. Segasime hoolikalt spaatliga.
+23. Segati hoolikalt spaatliga.
 
-24. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_3)`}{\ml} heksaani.
+24. Peenestatud massile lisati \qty{`r as.character(quantity_of_hexane_for_bell_pepper_3)`}{\ml} heksaani.
 
-25. Segasime hoolikalt spaatliga.
+25. Segati hoolikalt spaatliga.
 
-26. Filtrisime mõõtesilindrisse.
+26. Filtriti mõõtesilindrisse.
 
-27. Peenestatud massile lisasime \qty{`r as.character(quantity_of_hexane_for_bell_pepper_4)`}{\ml} heksaani.
+27. Peenestatud massile lisati \qty{`r as.character(quantity_of_hexane_for_bell_pepper_4)`}{\ml} heksaani.
 
-28. Kordasime samme \numrange{25}{26}, kuni uhmris enam kollast värvust väga ei paistnud.
+28. Korrati samme \numrange{25}{26}, kuni uhmris enam kollast värvust väga ei paistnud.
 
-29. Mõõtsime mõõtesilindriga saadud ekstrakti üldmahuks \qty{`r as.character(quantity_of_extract)`}{\ml}.
+29. Mõõdeti mõõtesilindriga saadud ekstrakti üldmahuks \qty{`r as.character(quantity_of_extract)`}{\ml}.
 
-30. Täitsime \qty{1}{\cm} laiusega võrdlusküveti puhta n-heksaaniga.
+30. Täideti \qty{1}{\cm} laiusega võrdlusküvett puhta n-heksaaniga.
 
-31. Täitsime mõõteküveti punktis 13 väljamõõdetud ekstraktiga.
+31. Täideti mõõteküveti punktis 13 väljamõõdetud ekstraktiga.
     
     ```{r label = "optical-density-of-carrot", echo=FALSE}
     librarian::shelf(c(
@@ -164,23 +166,23 @@ mass_of_carrot <- .91
 
     ```
 
-32. Juhendaja määras spektrofotomeetri neeldumisspektri vahemikuks \qtyrange{`r as.character(min_wave_length)`}{`r as.character(max_wave_length)`}{\nm}.
+32. Määrati spektrofotomeetri neeldumisspektri vahemikuks \qtyrange{`r as.character(min_wave_length)`}{`r as.character(max_wave_length)`}{\nm}.
 
-33. Asetasime võrdlusküveti spektrofotomeetrisse.
+33. Asetati võrdlusküvett spektrofotomeetrisse.
 
-34. Asetasime mõõteküveti spektrofotomeetrisse.
+34. Asetati mõõteküvett spektrofotomeetrisse.
 
-35. Juhendaja käivitas spektrofotomeetri mõõtmisprotsessi.
+35. Käivitati spektrofotomeetri mõõtmisprotsessi.
 
-36. Täitsime \qty{1}{\cm} laiusega võrdlusküveti puhta n-heksaaniga.
+36. Täideti \qty{1}{\cm} laiusega võrdlusküvett puhta n-heksaaniga.
 
-37. Täitsime mõõteküveti punktis 29 väljamõõdetud ekstraktiga.
+37. Täideti mõõteküvett punktis 29 väljamõõdetud ekstraktiga.
 
-38. Kordasime samme \numrange{33}{35}.
+38. Korrati samme \numrange{33}{35}.
 
-39. Juhendaja salvestas tulemused tabelarvutusfaili.
+39. Salvestati tulemused tabelarvutusfaili.
 
-40. Lasen välja selgitada porgandi optilise tiheduse. Selleks imporditakse esmalt sisendandmete fail:
+40. Lasti välja selgitada porgandi optiline tihedus. Selleks imporditakse esmalt sisendandmete fail:
     
     Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-carrot) leheküljel `r render_pageref(reference = "fig:whole-graph-of-carrot")`.
     
@@ -250,7 +252,7 @@ mass_of_carrot <- .91
 
     ```
     
-    Lasen arvutada $\beta$-karoteeni sisalduse lainepikkuse \qty{450}{\nm} korral:
+    Lasti arvutada $\beta$-karoteeni sisaldus lainepikkuse \qty{450}{\nm} korral:
     
     ```{r label = "calculation-of-beta-carotene-for-carrot", echo=FALSE}
     absorption_at_450_nm <- subset(subset_of_densities, 450 == `Wavelength nm.`)
@@ -274,7 +276,7 @@ mass_of_carrot <- .91
     
     $\beta$-karoteeni sisaldus lainepikkuse \qty{450}{\nm} korral kollase porgandi proovis oli \qty{`r as.character(signif(K_of_carrot, digits = 2))`}{\mg\percent}.
 
-41. Lasen välja selgitada paprika optilise tiheduse. Selleks imporditakse esmalt sisendandmete fail:
+41. Lasti välja selgitada paprika optiline tihedus. Selleks imporditakse esmalt sisendandmete fail:
     
     Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-bell-pepper) leheküljel `r render_pageref(reference = "fig:whole-graph-of-bell-pepper")`.
     
@@ -325,7 +327,6 @@ mass_of_carrot <- .91
 
 ## Arutelu
 
-Valem \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")` on minu jaoks ebaselge. Ei leidnud ma sellist valemit ka Internetist. Eriti ebaselgeks teeb selle valemi asjaolu, et kõik ühikud taanduvad, aga ometi tahetakse vastavalt juhendile ühikuks määrata milligrammprotsenti. See ühik - milligrammprotsenti - näitab, mitu milligrammi $\beta$-karoteeni on \qty{100}{\mg} uuritavas proovis. Nüüd saan ma küll aru, miks milligrammprotsenti võib olla ka ühikuta, sest see on milligrammid jagatuna milligrammidega. Samas, Wikipedias arutletakse, et mõeldud oli kontsentratsiooni massiühikutes ruumalaühiku kohta, kuid ebakorrektselt[@a2021_milligram], sest korrektne selgitus tähendaks hoopis sajandikku milligrammi. Aga sellises juhus ei ole valem korrektne.
+Valem \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")` on minu jaoks ebaselge. Ei leitud sellist valemit ka Internetist. Eriti ebaselgeks teeb selle valemi asjaolu, et kõik ühikud taanduvad, aga ometi tahetakse vastavalt juhendile ühikuks määrata milligrammprotsenti. See ühik - milligrammprotsenti - näitab, mitu milligrammi $\beta$-karoteeni on \qty{100}{\mg} uuritavas proovis. Nüüd saan ma küll aru, miks milligrammprotsenti võib olla ka ühikuta, sest see on milligrammid jagatuna milligrammidega. Samas, Wikipedias arutletakse, et mõeldud oli kontsentratsiooni massiühikutes ruumalaühiku kohta, kuid ebakorrektselt[@a2021_milligram], sest korrektne selgitus tähendaks hoopis sajandikku milligrammi. Aga sellises juhus ei ole valem korrektne.
 
 Vastavalt juhendis esitatud neeldumisgraafikute kujule sisaldasid nii porgandi kui paprika proov üheaegselt erinevaid karotenoide.
-

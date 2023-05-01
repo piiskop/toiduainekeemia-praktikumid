@@ -1,12 +1,14 @@
-# Piima analüüs
+# Rasva- ja valgusisaldus piimas
 
 ## Kuupäev
 
-2023-03-15
+2023-03-15.
 
 ## Teostajad
 
-Töö teostasin Ants-Andre Länsiga.
+1. Ants-Andre Läns ja
+
+2. peacecop kalmer:.
 
 ## Rasvasisaldus
 
@@ -42,18 +44,18 @@ Piima rasvasisaldus kontrollitud.
 
 ### Töö käik
 
-1.  Kaalusime \num{50}-\unit{\ml} keeduklaasi:
+1.  Kaaluti \num{50}-\unit{\ml} keeduklaas:
 
     ```{r label = "beaker-for-milk", echo=FALSE}
     mass_of_beaker_for_milk <- 37.79
 
     ```
 
-    Selle keeduklaasi massiks mõõtsime \qty{`r as.character(mass_of_beaker_for_milk)`}{\g}.
+    Selle keeduklaasi massiks mõõdeti \qty{`r as.character(mass_of_beaker_for_milk)`}{\g}.
     
-2. Mõõtsime sellesse \qty{15}{\ml} piima.
+2. Mõõdeti sellesse \qty{15}{\ml} piima.
 
-3.  Kaalusime klaasi koos piimaga:
+3.  Kaaluti klaas koos piimaga:
 
     ```{r label = "beaker-with-milk", echo=FALSE}
     mass_of_beaker_with_milk <- 51.71
@@ -62,7 +64,7 @@ Piima rasvasisaldus kontrollitud.
 
     Selle keeduklaasi massiks koos piimaga mõõtsime \qty{`r as.character(mass_of_beaker_with_milk)`}{\g}.
    
-4.  Lasen arvutada piima massi:
+4.  Lasti arvutada piima mass:
 
     ```{r label = "mass-of-milk", echo=FALSE}
     mass_of_milk <- mass_of_beaker_with_milk - mass_of_beaker_for_milk
@@ -71,21 +73,21 @@ Piima rasvasisaldus kontrollitud.
     
     Piima mass oli \qty{`r as.character(mass_of_milk)`}{\g}.
     
-5.  Valasime piima suurde katseklaasi.
+5.  Valati piim suurde katseklaasi.
 
-6. Lisasime tõmbekapi all metüleenkloriidi.
+6. Lisati tõmbekapi all metüleenkloriid.
 
-7. Sulgesime tuubi korgiga.
+7. Suleti tuub korgiga.
 
-8. Loksutasime rahulikult pool minutit.
+8. Loksutati rahulikult pool minutit.
 
-9. Lasime segul kihistuda.
+9. Lasti segul kihistuda.
 
-10. Viisime pealmise kihi Pasteur'i pipetiga tagasi keeduklaasi.
+10. Viidi pealmine kiht Pasteur'i pipetiga tagasi keeduklaasi.
 
 []{#rasvata-piim}
 
-11. Kaalusime rasvata piimaga klaasi:
+11. Kaaluti rasvata piimaga klaas:
 
     ```{r label = "mass-of-milk-without-fat-in-beaker", echo=FALSE}
     mass_of_milk_without_fat_in_beaker <- 50.99
@@ -93,9 +95,9 @@ Piima rasvasisaldus kontrollitud.
     
     ```
     
-    Rasvata piim kaalus \qty{`r as.character(mass_of_milk_without_fat)`}{\g}. Selle piima säilitasime [valgusisalduse]{#valgusisaldus} eksperimendiks.
+    Rasvata piim kaalus \qty{`r as.character(mass_of_milk_without_fat)`}{\g}. See piim säilitati [valgusisalduse]{#valgusisaldus} eksperimendiks.
     
-12. Lasen arvutada rasva koguse:
+12. Lasti arvutada rasva kogus:
 
     ```{r label = "mass-of-fat", echo=FALSE}
     mass_of_fat <- mass_of_milk - mass_of_milk_without_fat
@@ -104,7 +106,7 @@ Piima rasvasisaldus kontrollitud.
     
     Rasvata piim kaalus \qty{`r as.character(signif(mass_of_fat, digits = 5))`}{\g}.
     
-13. Lasen arvutada rasvasisalduse:
+13. Lasti arvutada rasvasisaldus:
 
     ```{r label = "fat-percent-in-milk", echo=FALSE}
     experimental_fat_percent_in_milk <- mass_of_fat / mass_of_milk * 100
@@ -113,7 +115,7 @@ Piima rasvasisaldus kontrollitud.
     
     Piima rasvasisaldus oli \qty{`r as.character(signif(experimental_fat_percent_in_milk, digits = 3))`}{\percent}.
 
-14. Lasen arvutada meie väljaselgitatud piima rasvasisalduse ja pakendile märgitud piima rasvasisalduse suhtelise erinevuse:
+14. Lasti arvutada väljaselgitatud piima rasvasisalduse ja pakendile märgitud piima rasvasisalduse suhteline erinevus:
 
     ```{r label = "fat-percent-difference-in-milk", echo=FALSE}
     theoretical_fat_percent_in_milk <- 2.5
@@ -123,13 +125,13 @@ Piima rasvasisaldus kontrollitud.
     
     Suhteline erinevus piima rasvasisalduses oli \num{`r as.character(signif(fat_percent_difference_in_milk, digits = 2))`}.
     
-15. Mõõtsime tühja katseklaasi \ce{Na2CO3}.
+15. Mõõdeti tühja katseklaasi \ce{Na2CO3}.
 
-16. Lisasime \ce{KMnO4}.
+16. Lisati \ce{KMnO4}.
 
-17. Lisasime mõned tilgad metüleenkloriidi piimast eraldatud rasvaga.
+17. Lisati mõni tilk metüleenkloriidi piimast eraldatud rasvaga.
 
-18. Loksutasime. Värvus muutus roosast mattkollakaks-valkjaks. Järelikult kaaliumpermanganaat oksüdeeris rasva.
+18. Loksustati. Värvus muutus roosast mattkollakaks-valkjaks. Järelikult kaaliumpermanganaat oksüdeeris rasva.
 
 []{#valgusisaldus}
 
@@ -180,34 +182,34 @@ Piima valgusisaldus kontrollitud.
 
 ### Töö käik
 
-1. Lisasime rasvasisalduse eksperimendi töö käigu [\num{11}. sammul]{#rasvata-piim} säilitatud rasvata piimale tõmbekapi all äädikhappe.
+1. Lisati rasvasisalduse eksperimendi töö käigu [\num{11}. sammul]{#rasvata-piim} säilitatud rasvata piimale tõmbekapi all äädikhape.
 
-2. Segasime pool minutit klaaspulgaga.
+2. Segati pool minutit klaaspulgaga.
 
-3. Jätsime paariks minutiks seisma.
+3. Jäeti paariks minutiks seisma.
 
-4. Filtreerisime lahuse läbi filterpaberi ning säilitasime nii filtraadi kui sademe.
+4. Filtreeriti lahus läbi filterpaberi ning säilitati nii filtraat kui sade.
 
-5. Tühja katseklaasi pipeteerisime \qty{2}{\ml} filtraati.
+5. Tühja katseklaasi pipeteeriti \qty{2}{\ml} filtraati.
 
-6. Tühja katseklaasi pipeteerisime \qty{2}{\ml} piima.
+6. Tühja katseklaasi pipeteeriti \qty{2}{\ml} piima.
 
-7. Tühja katseklaasi pipeteerisime \qty{2}{\ml} vett.
+7. Tühja katseklaasi pipeteeriti \qty{2}{\ml} vett.
 
-8. Veele lisasime veidi sadet.
+8. Veele lisati veidi sadet.
 
-9. Asetasime veega katseklaasi kuuma vesivanni ja aeg-ajalt loksutasime, et sade lahustuks.
+9. Asetati veega katseklaas kuuma vesivanni ja aeg-ajalt loksutati, et sade lahustuks.
 
-10. Lisasime filtraadiga katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
+10. Lisati filtraadiga katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
 
-11. Lisasime piimaga katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
+11. Lisati piimaga katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
 
-12. Lisasime veega katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
+12. Lisati veega katseklaasi \qty{`r as.character(quantity_of_NaOH_per_tube)`}{\ml} \ce{NaOH} lahust.
 
-13. Lisasime filtraadiga katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
+13. Lisati filtraadiga katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
 
-14. Lisasime piimaga katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
+14. Lisati piimaga katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
 
-15. Lisasime veega katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
+15. Lisati veega katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
 
-16. Loksutasime sammudel \numrange{5}{7} mainitud katseklaase. Sisu kõikides katseklaasides värvus eri tooni roosakas-lillaks. Filtraadiga katseklaasis oli lõpuks segu kahkjaslilla, piimaga katseklaasis õrnroosa ja veega katseklaasis sügavlilla.
+16. Loksutati sammudel \numrange{5}{7} mainitud katseklaase. Sisu kõikides katseklaasides värvus eri tooni roosakas-lillaks. Filtraadiga katseklaasis oli lõpuks segu kahkjaslilla, piimaga katseklaasis õrnroosa ja veega katseklaasis sügavlilla.

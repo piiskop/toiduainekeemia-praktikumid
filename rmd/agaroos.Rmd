@@ -1,0 +1,66 @@
+# Agaroosi geelistamine
+
+## Kuupäev
+
+2023-03-29
+
+## Teostajad
+
+1. Ants-Andre Läns,
+
+2. Donna-Anna Arvik ja
+
+3. peacecop kalmer:.
+
+## Töö eesmärk
+
+Agaroosist geeli tegemise oskus omandatud.
+
+## Kasutatud töövahendid
+
+1. Vähemalt \num{40}-\unit{\ml} keeduklaas,
+
+2. mõõtesilinder ja
+
+3. magnetsegajaga pliit.
+
+## Reagentide kogused
+
+```{r label = "ratio-agarose", echo=FALSE}
+ratio_agarose <- 1e-2
+m_agarose_solution <- 20e-3
+
+```
+
+1.  Lasti arvutada vajalik vee kogus \qty{`r as.character(m_agarose_solution)`}{\kg} agaroosi \num{`r as.character(ratio_agarose)`}-osalise lahuse jaoks.
+
+    ```{r label = "m_H2O", echo=FALSE}
+    m_H2O <- (1 - ratio_agarose) * m_agarose_solution
+    
+    ```
+    
+    Vajalik vee kogus on \qty{`r as.character(m_H2O)`}{\kg}.
+    
+2.  Lasti arvutada vajalik agaroosi kogus \qty{`r as.character(m_agarose_solution)`}{\kg} agaroosi \num{`r as.character(ratio_agarose)`}-osalise lahuse jaoks.
+
+    ```{r label = "m-agarose", echo=FALSE}
+    m_agarose <- ratio_agarose * m_agarose_solution
+    
+    ```
+    
+    Vajalik vee kogus on \qty{`r as.character(m_agarose)`}{\kg}.
+
+3. \qty{100}{\ml} külma õli.
+
+## Töö käik
+    
+1. Kaaluti keeduklaasi vesi.
+
+2. Lisati agaroosi.
+
+3. Kuumutati pliidil üle temperatuuri \qty{37,7}{\degreeCelsius}, millest allapoole ei tohtinud temperatuuri enam lasta.
+
+4. Mõõdeti mõõtesilindrisse õli.
+
+5. Tilgutati agaroosi lahust õlisse jälgides pallide teket. Pallikesed olid nagu mullikesed ja vajusid põhja.
+

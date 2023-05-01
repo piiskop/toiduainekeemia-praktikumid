@@ -1,12 +1,14 @@
-# Toores ja keedetud liha
+# Lihasvalgud
 
 ## Kuupäev
 
-2023-03-15
+2023-03-15.
 
 ## Teostajad
 
-Töö teostasin Ants-Andre Länsiga.
+1. Ants-Andre Läns ja
+
+2. peacecop kalmer:.
 
 ## Töö eesmärk
 
@@ -42,61 +44,61 @@ Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
 
 ## Töö käik
 
-1. Peenestasime rasvata loomaliha.
+1. Peenestati rasvata loomaliha.
 
-2. \num{100}-\unit{\ml} tühja keeduklaasi kaalusime \qty{5}{\g} peenestatud liha.
+2. \num{100}-\unit{\ml} tühja keeduklaasi kaaluti \qty{5}{\g} peenestatud liha.
 
-3. Keeduklaasi lihaga kuumutasime \qty{10}{\min} keeval vesivannil, klaaspulgaga pidevalt liha segades. Jälgisime liha värvuse muutumist. Liha värvus muutus erkroosast hallikaks tuhmroosaks. Kuumutamise kestel lagunes müoglobiin vabastades hapniku ja kaotades erkroosa värvuse. Toimus liha denaturatsioon.
+3. Keeduklaasi lihaga kuumutati \qty{10}{\min} keeval vesivannil, klaaspulgaga pidevalt liha segades. Jälgiti liha värvuse muutumist. Liha värvus muutus erkroosast hallikaks tuhmroosaks. Kuumutamise kestel lagunes müoglobiin vabastades hapniku ja kaotades erkroosa värvuse. Toimus liha denaturatsioon.
 
-4. Viisime kuumutatud liha proovi \qty{50}{\ml} vee abil koonilisse kolbi.
+4. Viidi kuumutatud liha proovi \qty{50}{\ml} vee abil koonilisse kolbi.
 
-5. Kolbi sulgesime korgiga.
+5. Kolb suleti korgiga.
 
-6. Loksutasime kolbi \qty{10}{\min}.
+6. Loksutati kolbi \qty{10}{\min}.
 
-7. Liha vesiekstrakti filtrisime läbi paberfiltri \num{100}-\unit{\ml} koonilisse kolbi.
+7. Liha vesiekstrakt filtriti läbi paberfiltri \num{100}-\unit{\ml} koonilisse kolbi.
 
-8. Kordasime sammu \num{2}.
+8. Korrati sammu \num{2}.
 
-9. Viisime liha proovi \qty{50}{\ml} vee abil koonilisse kolbi.
+9. Viidi liha proov \qty{50}{\ml} vee abil koonilisse kolbi.
 
-10. Kordasime samme \numrange{5}{7}.
+10. Korrati samme \numrange{5}{7}.
 
-11. Pipeteerisime tühja katseklaasi \qty{5}{\ml} kuumutatud liha filtreeritud vesiekstrakti.
+11. Pipeteeriti tühja katseklaasi \qty{5}{\ml} kuumutatud liha filtreeritud vesiekstrakti.
 
-12. Pipeteerisime tühja katseklaasi \qty{5}{\ml} toore liha filtreeritud vesiekstrakti.
+12. Pipeteeriti tühja katseklaasi \qty{5}{\ml} toore liha filtreeritud vesiekstrakti.
 
-13. Pipeteerisime sammul \num{11} mainitud katseklaasi \qty{1}{\ml} \num{20}-\unit{\percent} sulfosalitsüülhappe lahust.
+13. Pipeteeriti sammul \num{11} mainitud katseklaasi \qty{1}{\ml} \num{20}-\unit{\percent} sulfosalitsüülhappe lahust.
 
-14. Pipeteerisime sammul \num{12} mainitud katseklaasi \qty{1}{\ml} \num{20}-\unit{\percent} sulfosalitsüülhappe lahust.
+14. Pipeteeriti sammul \num{12} mainitud katseklaasi \qty{1}{\ml} \num{20}-\unit{\percent} sulfosalitsüülhappe lahust.
 
-15. Loksutasime sammul \num{11} mainitud katseklaasi.
+15. Loksutati sammul \num{11} mainitud katseklaasi.
 
-16. Loksutasime sammul \num{12} mainitud katseklaasi.
+16. Loksutati sammul \num{12} mainitud katseklaasi.
 
-17. Lasime valkudel \qty{10}{\min} kestel sadeneda.
+17. Lasti valkudel \qty{10}{\min} kestel sadeneda.
 
-18. Hindasime sademete hulka sammul \num{11} mainitud katseklaasis. Sadet oli üle poole katseklaasi sisu, sest sulfosalitsüülhape sadestas albumiini.
+18. Hinnati sademete hulka sammul \num{11} mainitud katseklaasis. Sadet oli üle poole katseklaasi sisu, sest sulfosalitsüülhape sadestas albumiini.
 
-19. Hindasime sademete hulka sammul \num{12} mainitud katseklaasi. Sadet polnud näha, küll aga oli lahus hägune, sest sulfosalitsüülhape ei sadestanud albumiini.
+19. Hinnati sademete hulka sammul \num{12} mainitud katseklaasi. Sadet polnud näha, küll aga oli lahus hägune, sest sulfosalitsüülhape ei sadestanud albumiini.
 
-20. Kordasime samme \numrange{11}{12}.
+20. Korrati samme \numrange{11}{12}.
 
-21. Kuumutasime sammul 20 täidetud katseklaase kuumal vesivannil. Jälgisime sademe moodustumist ja selle kogust kummaski katseklaasis. Sade moodustus eelkuumutatud liha puhul muutes terve katseklaasi pandud sisu läbipaistmatuks. Annan toimunule selgituse: Kuumutamisel sadestus albumiin eelkuumutatud liha puhul.
+21. Kuumutati sammul 20 täidetud katseklaase kuumal vesivannil. Jälgiti sademe moodustumist ja selle kogust kummaski katseklaasis. Sade moodustus eelkuumutatud liha puhul muutes terve katseklaasi pandud sisu läbipaistmatuks. Anti toimunule selgitus: Kuumutamisel sadestus albumiin eelkuumutatud liha puhul.
 
-22. Pipeteerisime tühja katseklaasi \qty{2}{\ml} kuumutatud liha filtreeritud vesiekstrakti.
+22. Pipeteeriti tühja katseklaasi \qty{2}{\ml} kuumutatud liha filtreeritud vesiekstrakti.
 
-23. Pipeteerisime tühja katseklaasi \qty{2}{\ml} toore liha filtreeritud vesiekstrakti.
+23. Pipeteeriti tühja katseklaasi \qty{2}{\ml} toore liha filtreeritud vesiekstrakti.
 
-24. Sammul \num{22} mainitud katseklaasi lisasime \qty{2}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust.
+24. Sammul \num{22} mainitud katseklaasi lisati \qty{2}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust.
 
-25. Sammul \num{23} mainitud katseklaasi lisasime \qty{2}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust.
+25. Sammul \num{23} mainitud katseklaasi lisati \qty{2}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust.
 
-26. Sammul \num{22} mainitud katseklaasi lisasime \numrange{1}{2} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
+26. Sammul \num{22} mainitud katseklaasi lisati \numrange{1}{2} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
 
-27. Sammul \num{23} mainitud katseklaasi lisasime \numrange{1}{2} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
+27. Sammul \num{23} mainitud katseklaasi lisati \numrange{1}{2} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
 
-28. Loksutasime sammudel \numrange{22}{23} mainitud katseklaase. Jälgisime sinise värvuse tekkimist ja intensiivsust. Kuumutatud liha filtreeritud vesiekstraktiga katseklaasis muutus lahus üsna intensiivseks roosaks, teises katseklaasis jäi sisu värvituks ja läbipaistvaks. Tugevalt leeliselises kk-s annab valk
+28. Loksutati sammudel \numrange{22}{23} mainitud katseklaase. Jälgiti sinise värvuse tekkimist ja intensiivsust. Kuumutatud liha filtreeritud vesiekstraktiga katseklaasis muutus lahus üsna intensiivseks roosaks, teises katseklaasis jäi sisu värvituks ja läbipaistvaks. Tugevalt leeliselises kk-s annab valk
 vask(II)ioonidega sinakas-violetse ja peptiidid annavad roosa värvusega biureedikompleksi, mis
 moodustub vask(II)ioonide seostumisel koordinatiivsidemetega
 peptiidsidemete lämmastiku aatomitega. Biureetkompleksi

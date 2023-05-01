@@ -1,12 +1,16 @@
-# Geelpallikesed
+# Alginaadi geelistamine
 
-## Kuupäevad
+## Kuupäev
 
-2023-03-29
+2023-03-29.
 
 ## Teostajad
 
-Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga.
+1. Ants-Andre Läns,
+
+2. Donna-Anna Arvik ja
+
+3. peacecop kalmer:.
 
 ## Töö eesmärk
 
@@ -16,15 +20,11 @@ Alginaadist geeli tegemise oskus omandatud.
 
 1. Neli keeduklaasi,
 
-2. mõõtesilinder,
+2. magnetsegajaga pliit,
 
-3. magnetsegajaga pliit,
+3. pipett ja
 
-4. klaaspulk, 
-
-5. pipett ja
-
-6. filter.
+4. filter.
 
 ## Reagentide kogused
 
@@ -38,13 +38,13 @@ Alginaadist geeli tegemise oskus omandatud.
 
 ## Töö käik
 
-```{r label = "V-NaAlg"}
+```{r label = "V-NaAlg", echo=FALSE}
 V_NaAlg <- 20e-6
 ratio_NaAlg <- 1e-2
 
 ```
 
-1.  Lasen arvutada, kui palju on vaja naatriumalginaati \num{`r as.character(ratio_NaAlg)`}-osase \qty{`r as.character(V_NaAlg)`}{\m\cubed} lahuse valmistamiseks. See lahus peab koosnema kahest osast: naatriumalginaadist ja veest. Kui lahuse ruumala on $V$, siis naatriumalginaadi osa on $V_\text{\ce{NaAlg}}$[@sodium] ja vee osa $V - V_\text{\ce{NaAlg}}$. Massi arvutamiseks ruumala ja tiheduse järgi kasutan valemit \@ref(eq:mass-concentration) leheküljel `r render_pageref(reference = "eq:mass-concentration")`.
+1.  Lasti arvutada, kui palju on vaja naatriumalginaati \num{`r as.character(ratio_NaAlg)`}-osase \qty{`r as.character(V_NaAlg)`}{\m\cubed} lahuse valmistamiseks. See lahus peab koosnema kahest osast: naatriumalginaadist ja veest. Kui lahuse ruumala on $V$, siis naatriumalginaadi osa on $V_\text{\ce{NaAlg}}$[@sodium] ja vee osa $V - V_\text{\ce{NaAlg}}$. Massi arvutamiseks ruumala ja tiheduse järgi kasutati valemit \@ref(eq:mass-concentration) leheküljel `r render_pageref(reference = "eq:mass-concentration")`.
 
     ```{=tex}
     \begin{align}
@@ -82,7 +82,7 @@ ratio_NaAlg <- 1e-2
     
     ```
     
-    Avaldan sellest seosest naatriumalginaadi ruumala  seoses \@ref(eq:V-NaAlg) leheküljel `r render_pageref(reference = "eq:V-NaAlg")`.
+    Avaldati sellest seosest naatriumalginaadi ruumala  seoses \@ref(eq:V-NaAlg) leheküljel `r render_pageref(reference = "eq:V-NaAlg")`.
     
     ```{=tex}
     \begin{landscape}
@@ -97,7 +97,7 @@ ratio_NaAlg <- 1e-2
     
     ```
     
-    Massitiheduse kaudu valemist \@ref(eq:mass-concentration) leheküljel `r render_pageref(reference = "eq:mass-concentration")` avaldan naatriumalginaadi ruumalast massi avaldises \@ref(eq:m-NaAlg) leheküljel `r render_pageref(reference = "eq:m-NaAlg")`.
+    Massitiheduse kaudu valemist \@ref(eq:mass-concentration) leheküljel `r render_pageref(reference = "eq:mass-concentration")` avaldati naatriumalginaadi ruumalast massi avaldises \@ref(eq:m-NaAlg) leheküljel `r render_pageref(reference = "eq:m-NaAlg")`.
 
     ```{=tex}
     \begin{align}
@@ -107,28 +107,28 @@ ratio_NaAlg <- 1e-2
     
     ```
 
-    ```{r label = "gamma-NaAlg"}
+    ```{r label = "gamma-NaAlg", echo=FALSE}
     gamma_NaAlg <- 1e3
     gamma_H2O <- 0.9970470e3
     
     ```
     
-    Naatriumalginaadi tihedus temperatuuril \qty{25}{\degreeCelsius} on \qty{`r as.character(gamma_NaAlg)`}{\kg\per\m\cubed}. Vee tihedus samal temperatuuril on \qty{`r as.character(gamma_H2O)`}{\kg\per\m\cubed}[@haynes_2014_crc, lk 6-8]. Lasen arvutada vajaliku naatriumalginaadi ja vee massi.
+    Naatriumalginaadi tihedus temperatuuril \qty{25}{\degreeCelsius} on \qty{`r as.character(gamma_NaAlg)`}{\kg\per\m\cubed}. Vee tihedus samal temperatuuril on \qty{`r as.character(gamma_H2O)`}{\kg\per\m\cubed}[@haynes_2014_crc, lk 6-8]. Lasti arvutada vajalik naatriumalginaadi ja vee mass.
     
-    ```{r label = "m_NaAlg"}
+    ```{r label = "m_NaAlg", echo=FALSE}
     ratio_H2O <- 1 - ratio_NaAlg
     m_NaAlg <- gamma_NaAlg * gamma_H2O * V_NaAlg * ratio_NaAlg / (gamma_NaAlg * ratio_H2O + gamma_H2O * ratio_NaAlg)
     m_H2O <- m_NaAlg * ratio_H2O / ratio_NaAlg
     
     ```
 
-    Kaalusime vett tühja keeduklaasi \qty{`r as.character(m_H2O)`}{\kg}. Lisasime naatriumalginaati \qty{`r as.character(m_NaAlg)`}{\kg}.
+    Kaaluti vett tühja keeduklaasi \qty{`r as.character(signif(m_H2O, digits = 1))`}{\kg}. Lisati naatriumalginaati \qty{`r as.character(signif(m_NaAlg, digits = 1))`}{\kg}.
 
-2. Kuumutasime naatriumalginaadi lahuse pliidil magnetsegajaga segades.
+2. Kuumutati naatriumalginaadi lahus pliidil magnetsegajaga segades.
 
-3. Lisasime pipetiga naatriumalginaati vaheldumisi kummassegi kaaliumkloriidi lahusesse, kuni tekkisid läbipaistvad pallikesed. \num{20}-\unit{\percent} lahuses tekkisid pallikesed kiiremini.
+3. Lisati pipetiga naatriumalginaati vaheldumisi kummassegi kaaliumkloriidi lahusesse, kuni tekkisid läbipaistvad pallikesed. \num{20}-\unit{\percent} lahuses tekkisid pallikesed kiiremini.
 
-4. Filtrisime kõik läbipaistvad pallikesed tühja keeduklaasi loputades samaaegselt veega.
+4. Filtriti kõik läbipaistvad pallikesed tühja keeduklaasi loputades samaaegselt veega.
 
 ## Arutelu
 

@@ -2,11 +2,17 @@
 
 ## Kuupäevad
 
-2023-03-22 ja 2023-03-29
+1. 2023-03-22 ja
+
+2. 2023-03-29.
 
 ## Teostajad
 
-Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga.
+1. Ants-Andre Läns,
+
+2. Donna-Anna Arvik ja
+
+3. peacecop kalmer:.
 
 ## Töö eesmärk
 
@@ -75,7 +81,7 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
 
 ## Töö käik
 
-1.  Kaalusime keeduklaasi.
+1.  Kaaluti keeduklaas.
     
     ```{r label = "mass-of-beaker", echo = FALSE}
     mass_of_beaker <- 124.48
@@ -84,25 +90,25 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
     
     Keeduklaasi mass on \qty{`r as.character(mass_of_beaker)`}{\g}.
     
-2. Valasime keeduklaasi \qty{`r as.character(volume_of_water_for_kissel)`}{\ml} vett.
+2. Valati keeduklaasi \qty{`r as.character(volume_of_water_for_kissel)`}{\ml} vett.
 
-3. Lisasime suhkru.
+3. Lisati suhkur.
 
-4. Lisasime sidrunhappe.
+4. Lisati sidrunhape.
 
-5. Ajasime lahuse keema.
+5. Aeti lahus keema.
 
-6. Lisasime tärklise peenikese nirena samaaegselt segades vältimaks klompide teket.
+6. Lisati tärklis peenikese nirena samaaegselt segades vältimaks klompide teket.
 
-7. Segu keetsime ühe minuti või esimese mulli tekkeni.
+7. Segu keedeti üks minut või esimese mulli tekkeni.
 
-8. Võtsime kisselli pliidilt ja panime selle jahtuma külma vesivanni.
+8. Võeti kissell pliidilt ja pandi see jahtuma külma vesivanni.
 
-9. Kuivatasime keeduklaasi väljastpoolt.
+9. Kuivatati keeduklaas väljastpoolt.
 
-10. Kaalusime keeduklaasi koos kisselliga.
+10. Kaaluti keeduklaas koos kisselliga.
 
-11. Lasen arvutada saadud kisselli massi.
+11. Lasti arvutada saadud kisselli mass.
     
     ```{r label = "mass-of-kissel", echo = FALSE}
     mass_of_beaker_with_kissel <- 332.22
@@ -117,35 +123,35 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
     
     ```
     
-12. Mõõtkolbi kaalusime \qty{`r as.character(mass_of_kissel_for_titration)`}{\g} kisselli.
+12. Mõõtkolbi kaaluti \qty{`r as.character(mass_of_kissel_for_titration)`}{\g} kisselli.
 
-13. Lisasime \qty{170}{\ml} vett.
+13. Lisati \qty{170}{\ml} vett.
 
-14. Loksutasime ühtlase lahuse tekkeni.
+14. Loksutati ühtlase lahuse tekkeni.
 
-15. Lisasime baariumhüdroksiidi.
+15. Lisati baariumhüdroksiid.
 
-16. Täitsime kolbi veega mõõtejooneni.
+16. Täideti kolb veega mõõtejooneni.
     
-17. Loksutasime.
+17. Loksutati
 
-18. Jätsime seisma, kuni tärklise sade oli langenud kolvi põhja.
+18. Jäeti seisma, kuni tärklise sade oli langenud kolvi põhja.
 
-19. Lahuse filtrisime läbi kuiva voltfiltri tühja keeduklaasi.
+19. Lahus filtriti läbi kuiva voltfiltri tühja keeduklaasi.
 
-20. Täitsime büreti filtritud kisselli lahusega.
+20. Täideti bürett filtritud kisselli lahusega.
 
-21. Tühja \num{250}-\unit{\ml} keeduklaasi pipeteerisime \ce{K3Fe(CN)6}.
+21. Tühja \num{250}-\unit{\ml} keeduklaasi pipeteeriti \ce{K3Fe(CN)6}.
 
-22. Lisasime metüleensinise.
+22. Lisati metüleensinine.
 
-23. Lisasime naatriumhüdroksiidi.
+23. Lisati naatriumhüdroksiid.
 
-24. Ajasime lahuse elektripliidil keema.
+24. Aeti lahus elektripliidil keema.
 
-25. Tiitrisime lahust kisselliga, kuni see muutus õrnroosaks.
+25. Tiitriti lahust kisselliga, kuni see muutus õrnroosaks.
 
-26. Lasen arvutada invertsuhkru sisalduse kissellis kasutades valemit \@ref(eq:invert-sugar) leheküljel `r render_pageref(reference = "eq:invert-sugar")`.
+26. Lasti arvutada invertsuhkru sisalduse kissellis kasutades valemit \@ref(eq:invert-sugar) leheküljel `r render_pageref(reference = "eq:invert-sugar")`.
     
     ```{=tex}
     \begin{align}
@@ -178,7 +184,7 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
     
     Invertsuhkru sisaldus kissellis oli `r as.character(signif(X, digits = 3))`.
     
-27. Lasen arvutada inverteerunud sahharoosi sisalduse kissellis kasutades valemit \@ref(eq:X1) leheküljel `r render_pageref(reference = "eq:X1")`.
+27. Lasti arvutada inverteerunud sahharoosi sisalduse kissellis kasutades valemit \@ref(eq:X1) leheküljel `r render_pageref(reference = "eq:X1")`.
     
     ```{=tex}
     \begin{align}
@@ -200,7 +206,7 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
     
     Inverteerunud sahharoosi sisaldus kissellis oli `r as.character(signif(X_1, digits = 3))`.
     
-28. Lasen arvutada, milline osa sahharoosi allus inversioonile kasutades valemit \@ref(eq:Y) leheküljel `r render_pageref(reference = "eq:Y")`.
+28. Lasti arvutada, milline osa sahharoosi allus inversioonile kasutades valemit \@ref(eq:Y) leheküljel `r render_pageref(reference = "eq:Y")`.
     
     ```{=tex}
     \begin{align}

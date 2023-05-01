@@ -2,11 +2,13 @@
 
 ## Kuupäev
 
-2023-03-01
+2023-03-01.
 
 ## Teostajad
 
-Töö teostasin Ants-Andre Länsiga.
+1. Ants-Andre Läns ja
+
+2. peacecop kalmer:.
 
 ## Töö eesmärk
 
@@ -44,74 +46,74 @@ total_quantity_of_acid_or_lye <- quantity_of_acid_or_lye * 2
 
 ## Töö käik
 
-1. Kaalusime välja punase kapsa.
+1. Kaaluti välja punane kapsas.
 
-2. Lisasime \qty{150}{\ml} vett.
+2. Lisati \qty{150}{\ml} vett.
 
-3. Purustasime saumikseriga.
+3. Purustati saumikseriga.
 
-4. Saadud suspensiooni filtrisime.
+4. Saadud suspensiooni filtriti.
 
-5. Tühja keeduklaasi mõõtsime \qty{15}{\ml} ekstrakti.
+5. Tühja keeduklaasi mõõdeti \qty{15}{\ml} ekstrakti.
 
-6. Kordasime sammu \num{5} kaks korda.
+6. Korrati sammu \num{5} kaks korda.
 
-7. Lisasime sammul \num{5} mainitud ekstraktile ja selle kogusele selles keeduklaasis \qty{135}{\ml} destilleeritud vett.
+7. Lisati sammul \num{5} mainitud ekstraktile ja selle kogusele selles keeduklaasis \qty{135}{\ml} destilleeritud vett.
 
-8.  Kordasime sammu \num{6} kaks korda.
+8.  Korrati sammu \num{6} kaks korda.
 
     ```{r label = "quantity-of-cabbage-extract", echo=FALSE}
     quantity_of_extract <- 5
     
     ```
 
-9.  Mõõtsime tühja eri keeduklaasi välja \qty{`r as.character(quantity_of_extract)`}{\ml} ekstrakti.
+9.  Mõõdeti tühja eri keeduklaasi välja \qty{`r as.character(quantity_of_extract)`}{\ml} ekstrakti.
 
     ```{r label = "quantity-of-water-for-coloring", echo=FALSE}
     quantity_of_water_for_coloring <- 45
     
     ```
 
-10. Lisasime \qty{`r as.character(quantity_of_water_for_coloring)`}{\ml} destilleeritud vett.
+10. Lisati \qty{`r as.character(quantity_of_water_for_coloring)`}{\ml} destilleeritud vett.
     
-11. Lisasime aeglaselt äädikhapet kuni värvuse muutuseni kokku \num{`r as.character(quantity_of_acid_or_lye)`} tilka.
+11. Lisati aeglaselt äädikhapet kuni värvuse muutuseni kokku \num{`r as.character(quantity_of_acid_or_lye)`} tilka.
 
-12. Kordasime samme \numrange{9}{10}.
+12. Korrati samme \numrange{9}{10}.
 
-13. Lisasime aeglaselt leelist kuni värvuse muutuseni kokku \num{`r as.character(quantity_of_acid_or_lye)`} tilka.
+13. Lisati aeglaselt leelist kuni värvuse muutuseni kokku \num{`r as.character(quantity_of_acid_or_lye)`} tilka.
 
-14. Kordasime samme \numrange{9}{10}.
+14. Korrati samme \numrange{9}{10}.
 
     ```{r label = "quantity-of-water-for-comparison", echo=FALSE}
     quantity_of_water_for_comparison <- quantity_of_extract + quantity_of_water_for_coloring
     
     ```
     
-11. Tühja keeduklaasi sisestasime \qty{`r as.character(quantity_of_water_for_comparison)`}{\ml} destilleeritud vett.
+11. Tühja keeduklaasi sisestati \qty{`r as.character(quantity_of_water_for_comparison)`}{\ml} destilleeritud vett.
 
-12. Kordasime sammu \num{11} kaks korda.
+12. Korrati sammu \num{11} kaks korda.
 
-13. Lisasime sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka äädikhapet.
+13. Lisati sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka äädikhapet.
 
-14. Lisasime sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka leelist.
+14. Lisati sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka leelist.
 
-15. Sisestasime tühja eri küvetti sammul \num{11} mainitud sama keeduklaasi lahuse.
+15. Sisestati tühja eri küvetti sammul \num{11} mainitud sama keeduklaasi lahus.
 
-16. Kordasime sammu \num{15}.
+16. Korrati sammu \num{15}.
 
-17. Sisestasime tühja eri küvetti sammul \num{9} mainitud eri keeduklaasi lahuse.
+17. Sisestati tühja eri küvetti sammul \num{9} mainitud eri keeduklaasi lahus.
 
-18. Lasime juhendajal mõõta neeldumisspektri.
+18. Lasti juhendajal mõõta neeldumisspekter.
 
-19. Sisestasime tühja eri küvetti sammul \num{11} mainitud eri keeduklaasi lahuse.
+19. Sisestati tühja eri küvetti sammul \num{11} mainitud eri keeduklaasi lahus.
 
-20. Kordasime samme \numrange{16}{18}.
+20. Korrati samme \numrange{16}{18}.
 
 21. Kordasime samme \numrange{19}{20}.
 
-22. Juhendaja tekitas meile sisendandmete faili.
+22. Tekitati meile sisendandmete fail.
 
-23. Sisendfaili põhjal näitan kapsa neeldumisspektrid.
+23. Sisendfaili põhjal näidatakse kapsa neeldumisspektrid.
 
     Terve optilise tiheduse graafik äädikhappega kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage-with-acid) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage-with-acid")`.
     

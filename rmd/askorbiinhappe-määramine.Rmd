@@ -2,11 +2,17 @@
 
 ## Kuupäevad
 
-2023-03-22 ja 2023-03-29
+1. 2023-03-22 ja
+
+2. 2023-03-29.
 
 ## Teostajad
 
-Töö teostasin Donna-Anna Arviki ja Ants-Andre Länsiga.
+1. Ants-Andre Läns,
+
+2. Donna-Anna Arvik ja
+
+3. peacecop kalmer:.
 
 ## Töö eesmärk
 
@@ -70,7 +76,7 @@ C-vitamiini sisalduse kontrollimise oskus omandatud.
     
     ```
 
-6. \ce{KIO3},
+6. \ce{KIO3} ja
 
 7. vesi.
     
@@ -81,35 +87,35 @@ mass_of_C <- 1
 
 ```
 
-1.  Uhmerdasime \num{`r as.character(mass_of_C)`}-\unit{\mg} C-vitamiini sisaldava tableti.
+1.  Uhmerdati \num{`r as.character(mass_of_C)`}-\unit{\mg} C-vitamiini sisaldav tablett.
 
     ```{r label = "volume-of-H2O", echo=FALSE}
     volume_of_H2O <- 200
 
     ```
 
-2. Lahustasime tableti \qty{`r as.character(volume_of_H2O)`}{\ml} vees. Segasime.
+2. Lahustati tablett \qty{`r as.character(volume_of_H2O)`}{\ml} vees. Segati.
 
-3. Filtreerisime saadud lahuse.
+3. Filtreeriti saadud lahus.
 
-4.  Mõõtsime \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
+4.  Mõõdeti \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
 
     ```{r label = "volume-of-C", echo=FALSE}
     volume_of_C <- 5
 
     ```
 
-5. Mõõtsime samasse kolbi \qty{`r as.character(volume_of_C)`}{\ml} C-vitamiini lahust.
+5. Mõõdeti samasse kolbi \qty{`r as.character(volume_of_C)`}{\ml} C-vitamiini lahust.
 
-6. Mõõtsime samasse kolbi \qty{5}{\ml} \num{0,6}-\unit{\mol\per\l} \ce{KI} lahust.
+6. Mõõdeti samasse kolbi \qty{5}{\ml} \num{0,6}-\unit{\mol\per\l} \ce{KI} lahust.
 
-7. Mõõtsime samasse kolbi \qty{5}{\ml} \num{0,5}-\unit{\percent} tärklise lahust.
+7. Mõõdeti samasse kolbi \qty{5}{\ml} \num{0,5}-\unit{\percent} tärklise lahust.
 
-8. Mõõtsime samasse kolbi \qty{5}{\ml} \num{1}-\unit{\mol\per\l} \ce{HCl} lahust.
+8. Mõõdeti samasse kolbi \qty{5}{\ml} \num{1}-\unit{\mol\per\l} \ce{HCl} lahust.
 
-9. Segasime magnetsegajaga.
+9. Segati magnetsegajaga.
 
-10. Kolbi valmistatud lahust tiitrisime ühtlase sinise värvuse tekkeni. Kaaliumjodiidi lahuses olid kaaliumi ja joodi ioonid, millest kaaliumi omad enam tähtsust ei oma. Kaaliumjodaat reageeris joodi ioonidega happelises keskkonnas, mille tekitas \ce{HCl}, mis oli vesilahuses samuti ioonidena. Valemis \@ref(eq:KIO3-I-I2-K) leheküljel `r render_pageref(reference = "eq:KIO3-I-I2-K")` on esitatud kaaliumjodaadi ja joodi iooni reageerimise tasakaalustamata ja kõikide produktideta skeem [@santamonicacollege_2017_10].
+10. Kolbi valmistatud lahust tiitriti ühtlase sinise värvuse tekkeni. Kaaliumjodiidi lahuses olid kaaliumi ja joodi ioonid, millest kaaliumi omad enam tähtsust ei oma. Kaaliumjodaat reageeris joodi ioonidega happelises keskkonnas, mille tekitas \ce{HCl}, mis oli vesilahuses samuti ioonidena. Valemis \@ref(eq:KIO3-I-I2-K) leheküljel `r render_pageref(reference = "eq:KIO3-I-I2-K")` on esitatud kaaliumjodaadi ja joodi iooni reageerimise tasakaalustamata ja kõikide produktideta skeem [@santamonicacollege_2017_10].
 
     ```{=tex}
     \begin{align}
@@ -196,9 +202,9 @@ mass_of_C <- 1
     
     ```
     
-    Tiitrimise lõpus mõõtsime kasutatud kaaliumjodaadi koguseks \qty{`r as.character(volume_of_KIO3)`}{\ml}.
+    Tiitrimise lõpus mõõdeti kasutatud kaaliumjodaadi koguseks \qty{`r as.character(volume_of_KIO3)`}{\ml}.
 
-11. Lasen arvutada, mitu mooli C-vitamiini võtsime tiitrimiseks:
+11. Lasti arvutada, mitu mooli C-vitamiini võeti tiitrimiseks:
     
     ```{r label = "mass-of-C-in-bulb", echo=FALSE}
     mass_of_C_in_bulb <- mass_of_C / volume_of_H2O * volume_of_C
@@ -287,9 +293,9 @@ mass_of_C <- 1
 
     ```
 
-    Tiitrimiseks võtsime ilmselt \qty{`r as.character(signif(amount_of_C, digits = 2))`}{\mol} C-vitamiini.
+    Tiitrimiseks võeti ilmselt \qty{`r as.character(signif(amount_of_C, digits = 2))`}{\mol} C-vitamiini.
     
-12. Lasen arvutada kaaliumjodaadi lahuse molaarsuse.
+12. Lasti arvutada kaaliumjodaadi lahuse molaarsus.
 
     ```{r label = "calculating-molarity-of-KIO3", echo=FALSE}
     amount_of_KIO3 <- amount_of_C / 3
@@ -299,7 +305,7 @@ mass_of_C <- 1
     
     Kaaliumjodaadi lahuse molaarsus oli \qty{`r as.character(signif(molarity_of_KIO3, digits = 2))`}{\mol\per\l}.
     
-13. Testimiseks valisime *Suukaudse pihusti C-vitamiini*. Lasen arvutada selleks vajaliku lahusti mahu arvestades, et muud kogused jäävad samaks:
+13. Testimiseks valiti *Suukaudse pihusti C-vitamiini*. Lasti arvutada selleks vajaliku lahusti maht arvestades, et muud kogused jäävad samaks:
     
     ```{r label = "calculating-volume-of-C-in-spray", echo=FALSE}
     volume_of_KIO3_for_spray <- 10
@@ -310,9 +316,9 @@ mass_of_C <- 1
 
     ```
     
-    Et kõik muud kogused jääksid samaks, olnuks testitava C-vitamiini lahuse koguse maksimumpiir \qty{`r as.character(volume_of_C_in_spray)`}{\ml}. Tegelikult pihustasime testtoodet \num{`r as.character(number_of_sprays)`} lasku hoopis \qty{`r as.character(actual_volume_of_C_in_spray)`}{\ml} vette.
+    Et kõik muud kogused jääksid samaks, olnuks testitava C-vitamiini lahuse koguse maksimumpiir \qty{`r as.character(volume_of_C_in_spray)`}{\ml}. Tegelikult pihustati testtoodet \num{`r as.character(number_of_sprays)`} lasku hoopis \qty{`r as.character(actual_volume_of_C_in_spray)`}{\ml} vette.
 
-14. Mõõtsime tühja \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
+14. Mõõdeti tühja \num{250}-\unit{\ml} Erlenmeyeri kolbi \qty{150}{\ml} vett.
     
     ```{r label = "volume-of-C-in-spray-for-titration", echo=FALSE}
     actual_mass_of_C_in_spray_in_bulb <- 10e-3
@@ -320,11 +326,11 @@ mass_of_C <- 1
     
     ```
 
-15. Mõõtsime samasse kolbi \qty{`r as.character(signif(volume_of_C_in_spray_for_titration, digits = 2))`}{\ml} C-vitamiini sammul \num{13} valmistatud pihustilahust.
+15. Mõõdeti samasse kolbi \qty{`r as.character(signif(volume_of_C_in_spray_for_titration, digits = 2))`}{\ml} C-vitamiini sammul \num{13} valmistatud pihustilahust.
 
-16. Kordasime samme \numrange{6}{9}.
+16. Korrati samme \numrange{6}{9}.
 
-17. Kolbi valmistatud lahust tiitrisime \qty{`r as.character(volume_of_KIO3_for_spray)`}{\ml} kaaliumjodaadiga.
+17. Kolbi valmistatud lahust tiitriti \qty{`r as.character(volume_of_KIO3_for_spray)`}{\ml} kaaliumjodaadiga.
     
     ```{r label = "volume-of-KIO3-for-spray-used", echo=FALSE}
     volume_of_KIO3_for_spray_used <- 6.4
@@ -333,17 +339,17 @@ mass_of_C <- 1
     
     Pihusti C-vitamiini neutraliseerimiseks Erlenmeyeri kolbis kulus \qty{`r as.character(volume_of_KIO3_for_spray_used)`}{\ml} kaaliumjodaadi.
     
-18. Lasen arvutada meie väljaselgitatud C-vitamiini koguse viies pihustidoosis ja võrdlen pakendile märgituga:
+18. Lasti arvutada meie väljaselgitatud C-vitamiini koguse viies pihustidoosis ja võrreldi pakendile märgituga.
     
     ```{r label = "ratio-of-mass-of-C-experimental-to-theoretical", echo=FALSE}
     ratio_of_mass_of_C_experimental_to_theoretical <- mass_of_C_in_bulb / volume_of_KIO3 * volume_of_KIO3_for_spray_used / actual_mass_of_C_in_spray_in_bulb
     
     ```
     
-    Meie eksperimendi põhjal oli *Suukaudse pihusti C-vitamiini* askorbiinhappe sisaldus \num{`r as.character(ratio_of_mass_of_C_experimental_to_theoretical)`} pakendile märgitut.
+    Eksperimendi põhjal oli *Suukaudse pihusti C-vitamiini* askorbiinhappe sisaldus \num{`r as.character(ratio_of_mass_of_C_experimental_to_theoretical)`} pakendile märgitut.
     
 ## Arutelu
 
-Erinevus *Suukaudse pihusti C-vitamiini* pakendile märgitu ja eksperimentaalselt mõõdetud-arvutatud askorbiinhappe sisalduse vahel võib tuleneda mitmest asjaolust. Tiitrimisel tuleb olla tilgutamisega täpne ja mitte lasta tilkagi üle. Ebatäpsus võis tuleneda sellest, et me ei fikseerinud õiget kaaliumjodaadi kogust. Samuti ei pruukinud joodi ioone olla testlahuses piisavalt. Puudub alus väita, et pakendil olev info on vale, sest pihusti tootmiseks kasutatud vahendid ja meetodid on kindlasti täpsemad kui meie omad.
+Erinevus *Suukaudse pihusti C-vitamiini* pakendile märgitu ja eksperimentaalselt mõõdetud-arvutatud askorbiinhappe sisalduse vahel võib tuleneda mitmest asjaolust. Tiitrimisel tuleb olla tilgutamisega täpne, mitte tilgutada liiga vähe ega mitte lasta tilkagi üle. Ebatäpsus võis tuleneda sellest, et ei fikseeritud õiget kaaliumjodaadi kogust. Samuti ei pruukinud joodi ioone olla testlahuses piisavalt. Puudub alus väita, et pakendil olev info on vale, sest pihusti tootmiseks kasutatud vahendid ja meetodid on kindlasti täpsemad kui meie omad.
 
 C-vitamiini inimorganismis ei sünteesita, sest inimorganismis olev vastav ensüüm ei ole sisse lülitatud ilmselt põhjusel, et energeetiliselt olevat odavam C-vitamiini sisse süüa kui ise sünteesida.

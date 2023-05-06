@@ -16,31 +16,59 @@ Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
 
 ## Kasutatud töövahendid
 
-1. Keeduklaasid,
+1. \num{100}-\unit{\ml} keeduklaas,
 
-2. \num{100}-\unit{\ml} mõõtsilinder,
+2. \num{400}-\unit{\ml} keeduklaas,
 
-3. koonilised kolbid ja sobivad kummikorgid,
+3.  \qty{200}{\ml} kraanivett,
 
-4. klaaslehtrid,
+    ```{r label = "volume-of-water", echo = FALSE}
+    volume_of_water_for_pouring <- 50e-6
+    total_volume_of_water <- 2 * volume_of_water_for_pouring
+    
+    ```
 
-5. klaaspulgad,
+4. \qty{`r as.character(total_volume_of_water)`}{\m\cubed} vett,
 
-6. katseklaasid,
+5. kaks \num{100}-\unit{\ml} sobiliku kummikorgiga koonilist kolbi,
 
-7. paberfiltrid,
+6.  veel kaks sobiliku kummikorgiga koonilist kolbi,
 
-8. vesivann,
+7. kaks klaaslehtrit,
 
-9. mahtpipetid,
+8. klaaspulk,
 
-10. nuga ja
+9. kuus katseklaasi,
 
-11. lõikelaud.
+10. kaks paberfiltrit,
+
+11. kaks mahtpipetti,
+
+12. nuga ja
+
+13. lõikelaud.
 
 ## Reagentide kogused
 
-\qtyrange{15}{20}{\g} rasvata loomaliha.
+1. \qtyrange{15}{20}{\g} rasvata loomaliha,
+
+    ```{r label = "volume-of-NaOH", echo = FALSE}
+    volume_of_NaOH <- 2e-6
+    total_volume_of_NaOH <- 2 * volume_of_NaOH
+    
+    ```
+
+2. \qty{`r as.character(total_volume_of_NaOH)`}{\m\cubed} \num{30}-\unit{\percent} \ce{NaOH} lahust ja 
+
+    ```{r label = "volume-of-CuSO4", echo = FALSE}
+    min_volume_of_CuSO4 <- 1
+    max_volume_of_CuSO4 <- 2
+    total_min_volume_of_CuSO4 <- 2 * min_volume_of_CuSO4
+    total_max_volume_of_CuSO4 <- 2 * max_volume_of_CuSO4
+    
+    ```
+
+3. \numrange{`r as.character(total_min_volume_of_CuSO4)`}{`r as.character(total_max_volume_of_CuSO4)`} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
 
 ## Töö käik
 
@@ -48,9 +76,21 @@ Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
 
 2. \num{100}-\unit{\ml} tühja keeduklaasi kaaluti \qty{5}{\g} peenestatud liha.
 
-3. Keeduklaasi lihaga kuumutati \qty{10}{\min} keeval vesivannil, klaaspulgaga pidevalt liha segades. Jälgiti liha värvuse muutumist. Liha värvus muutus erkroosast hallikaks tuhmroosaks. Kuumutamise kestel lagunes müoglobiin vabastades hapniku ja kaotades erkroosa värvuse. Toimus liha denaturatsioon.
+3.  Keeduklaasi lihaga kuumutati \qty{10}{\min} keeval vesivannil, mille jaoks kasutati poolenisti kraaniveega täidetud \num{400}-\unit{\ml} keeduklaasi, klaaspulgaga pidevalt liha segades (joonis \@ref(fig:meat-while-heating) leheküljel `r render_pageref(reference = "fig:meat-while-heating")`.
+    
+    ```{r label = "meat-while-heating", echo=FALSE, fig.cap = "Liha värvub vesivannil kuumutamise kestel."}
+    include_external_graphics("rmd/lihaga-keeduklaas-vesivannis.jpg")
 
-4. Viidi kuumutatud liha proovi \qty{50}{\ml} vee abil koonilisse kolbi.
+    ```
+
+    Jälgiti liha värvuse muutumist. Liha värvus muutus erkroosast hallikaks tuhmroosaks (joonis \@ref(fig:meat-after-heating) leheküljel `r render_pageref(reference = "fig:meat-after-heating")`). Kuumutamise kestel lagunes müoglobiin vabastades hapniku ja kaotades erkroosa värvuse. Toimus liha denaturatsioon.
+
+    ```{r label = "meat-after-heating", echo=FALSE, fig.cap = "Pärast kuumutamist oli liha värvus hallikas tuhmroosa. Lisatakse vett, et selle abil liha viia koonilisse kolbi."}
+    include_external_graphics("rmd/liha-pärast-kuumutamist.png")
+
+    ```
+
+4. Viidi kuumutatud liha proov \qty{`r as.character(volume_of_water_for_pouring)`}{\m\cubed} vee abil koonilisse kolbi.
 
 5. Kolb suleti korgiga.
 
@@ -60,7 +100,7 @@ Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
 
 8. Korrati sammu \num{2}.
 
-9. Viidi liha proov \qty{50}{\ml} vee abil koonilisse kolbi.
+9. Viidi liha proov \qty{`r as.character(volume_of_water_for_pouring)`}{\m\cubed} vee abil tühja koonilisse kolbi.
 
 10. Korrati samme \numrange{5}{7}.
 
@@ -78,32 +118,42 @@ Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
 
 17. Lasti valkudel \qty{10}{\min} kestel sadeneda.
 
-18. Hinnati sademete hulka sammul \num{11} mainitud katseklaasis. Sadet oli üle poole katseklaasi sisu, sest sulfosalitsüülhape sadestas albumiini.
+18. Hinnati sademete hulka sammul \num{11} mainitud katseklaasis. Sadet oli üle poole katseklaasi sisu, sest sulfosalitsüülhape sadestas albumiini (joonis \@ref(fig:meat-with-sulphosalicylic-acid) leheküljel `r render_pageref(reference = "fig:meat-with-sulphosalicylic-acid")`).
 
-19. Hinnati sademete hulka sammul \num{12} mainitud katseklaasi. Sadet polnud näha, küll aga oli lahus hägune, sest sulfosalitsüülhape ei sadestanud albumiini.
+19. Hinnati sademete hulka sammul \num{12} mainitud katseklaasi. Sadet polnud näha, küll aga oli lahus hägune, sest sulfosalitsüülhape ei sadestanud albumiini (joonis \@ref(fig:meat-with-sulphosalicylic-acid) leheküljel `r render_pageref(reference = "fig:meat-with-sulphosalicylic-acid")`).
+    
+    ```{r label = "meat-with-sulphosalicylic-acid", echo=FALSE, fig.cap = "Pildi vaataja poolt vasemal on kuumutatud lihast sadestatud albumiin, parempoolses katseklaasis, kus lahustati kuumutamata liha vesiekstrakti, albumiin ei sadestunud."}
+    include_external_graphics("rmd/liha-sulfosalitsüülhappega.jpg")
+
+    ```
 
 20. Korrati samme \numrange{11}{12}.
 
-21. Kuumutati sammul 20 täidetud katseklaase kuumal vesivannil. Jälgiti sademe moodustumist ja selle kogust kummaski katseklaasis. Sade moodustus eelkuumutatud liha puhul muutes terve katseklaasi pandud sisu läbipaistmatuks. Anti toimunule selgitus: Kuumutamisel sadestus albumiin eelkuumutatud liha puhul.
+21. Kuumutati sammul 20 täidetud katseklaase kuumal vesivannil. Jälgiti sademe moodustumist ja selle kogust kummaski katseklaasis. Sade moodustus eelkuumutatud liha puhul muutes terve katseklaasi pandud sisu läbipaistmatuks (joonis \@ref(fig:meat-in-test-tubes) leheküljel `r render_pageref(reference = "fig:meat-in-test-tubes")`). Anti toimunule selgitus: Kuumutamisel sadestus albumiin eelkuumutatud liha puhul.
+    
+    ```{r label = "meat-in-test-tubes", echo=FALSE, fig.cap = "Pildi vaataja poolt vasemal on kuumutatud lihast sadestatud albumiin, parempoolses katseklaasis, kus kuumutamata liha vesiekstrakt, albumiin ei sadestunud."}
+    include_external_graphics("rmd/liha-katseklaasides.jpg")
+
+    ```
 
 22. Pipeteeriti tühja katseklaasi \qty{2}{\ml} kuumutatud liha filtreeritud vesiekstrakti.
 
 23. Pipeteeriti tühja katseklaasi \qty{2}{\ml} toore liha filtreeritud vesiekstrakti.
 
-24. Sammul \num{22} mainitud katseklaasi lisati \qty{2}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust.
+24. Sammul \num{22} mainitud katseklaasi lisati \qty{`r as.character(volume_of_NaOH)`}{\m\cubed} \ce{NaOH} lahust.
 
-25. Sammul \num{23} mainitud katseklaasi lisati \qty{2}{\ml} \num{30}-\unit{\percent} \ce{NaOH} lahust.
+25. Sammul \num{23} mainitud katseklaasi lisati \qty{`r as.character(volume_of_NaOH)`}{\m\cubed} \ce{NaOH} lahust.
 
-26. Sammul \num{22} mainitud katseklaasi lisati \numrange{1}{2} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
+26. Sammul \num{22} mainitud katseklaasi lisati \numrange{`r as.character(min_volume_of_CuSO4)`}{`r as.character(max_volume_of_CuSO4)`} tilka \ce{CuSO4} lahust.
 
-27. Sammul \num{23} mainitud katseklaasi lisati \numrange{1}{2} tilka \num{2}-\unit{\percent} \ce{CuSO4} lahust.
+27. Sammul \num{23} mainitud katseklaasi lisati \numrange{`r as.character(min_volume_of_CuSO4)`}{`r as.character(max_volume_of_CuSO4)`} tilka \ce{CuSO4} lahust.
 
-28. Loksutati sammudel \numrange{22}{23} mainitud katseklaase. Jälgiti sinise värvuse tekkimist ja intensiivsust. Kuumutatud liha filtreeritud vesiekstraktiga katseklaasis muutus lahus üsna intensiivseks roosaks, teises katseklaasis jäi sisu värvituks ja läbipaistvaks. Tugevalt leeliselises kk-s annab valk
-vask(II)ioonidega sinakas-violetse ja peptiidid annavad roosa värvusega biureedikompleksi, mis
-moodustub vask(II)ioonide seostumisel koordinatiivsidemetega
-peptiidsidemete lämmastiku aatomitega. Biureetkompleksi
-värvuse
-intensiivsus
-sõltub
-valgu
-kontsentratsioonist ja vase ioonide hulgast lahuses.
+28. Loksutati sammudel \numrange{22}{23} mainitud katseklaase. Jälgiti sinise värvuse tekkimist ja intensiivsust (joonis \@ref(fig:meat-in-test-tubes-with-base-and-salt) leheküljel `r render_pageref(reference = "fig:meat-in-test-tubes-with-base-and-salt")`).
+    
+    ```{r label = "meat-in-test-tubes-with-base-and-salt", echo=FALSE, fig.cap = "Pildi vaataja poolt vasemal on kuumutatud liha naatriumhüdroksiidi ja vasksulfaadi lahuses, parempoolses katseklaasis on kuumutamata liha vesiekstrakt samade ainete lahuses."}
+    include_external_graphics("rmd/liha-katseklaasides-aluse-ja-soolaga.jpg")
+
+    ```
+
+     Kuumutatud liha filtreeritud vesiekstraktiga katseklaasis muutus lahus üsna intensiivseks roosaks, teises katseklaasis jäi sisu värvituks ja läbipaistvaks. Tugevalt leeliselises kk-s annab valk vask(II)ioonidega sinakas-violetse ja peptiidid annavad roosa värvusega biureedikompleksi, mis moodustub vask(II)ioonide seostumisel koordinatiivsidemetega peptiidsidemete lämmastiku aatomitega. Biureetkompleksi värvuse intensiivsus sõltub valgu kontsentratsioonist ja vase ioonide hulgast lahuses.
+     

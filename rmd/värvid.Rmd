@@ -182,6 +182,8 @@ mass_of_carrot <- .91
 
 39. Salvestati tulemused tabelarvutusfaili.
 
+\onecolumn
+
 40. Lasti välja selgitada porgandi optiline tihedus. Selleks imporditakse esmalt sisendandmete fail:
     
     Terve optilise tiheduse graafik on näha joonisel \@ref(fig:whole-graph-of-carrot) leheküljel `r render_pageref(reference = "fig:whole-graph-of-carrot")`.
@@ -309,7 +311,7 @@ mass_of_carrot <- .91
     wave_length_2 <- subset_of_densities$`Wavelength nm.`[peak_indices[2, 2]]
     
     ```
-    
+
     Tippväärtused on \num{`r as.character(peak_indices[1, 1])`} ja \num{`r as.character(peak_indices[2, 1])`}, millele vastavad lainepikkused \qty{`r as.character(wave_length_1)`}{\nm} ja \qty{`r as.character(wave_length_2)`}{\nm}.
     
     Juhendis eeldatakse, et maksimumväärtus on graafikul hoopis \qty{450}{\nm} puhul ja kästakse selle järgi arvutada $\beta$-karoteeni sisaldus proovis vastavalt valemile \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")`.
@@ -327,6 +329,6 @@ mass_of_carrot <- .91
 
 ## Arutelu
 
-Valem \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")` on minu jaoks ebaselge. Ei leitud sellist valemit ka Internetist. Eriti ebaselgeks teeb selle valemi asjaolu, et kõik ühikud taanduvad, aga ometi tahetakse vastavalt juhendile ühikuks määrata milligrammprotsenti. See ühik - milligrammprotsenti - näitab, mitu milligrammi $\beta$-karoteeni on \qty{100}{\mg} uuritavas proovis. Nüüd saan ma küll aru, miks milligrammprotsenti võib olla ka ühikuta, sest see on milligrammid jagatuna milligrammidega. Samas, Wikipedias arutletakse, et mõeldud oli kontsentratsiooni massiühikutes ruumalaühiku kohta, kuid ebakorrektselt[@a2021_milligram], sest korrektne selgitus tähendaks hoopis sajandikku milligrammi. Aga sellises juhus ei ole valem korrektne.
+Valem \@ref(eq:K) leheküljel `r render_pageref(reference = "eq:K")` on ebaselge. Ei leitud sellist valemit ka Internetist. Eriti ebaselgeks teeb selle valemi asjaolu, et kõik ühikud taanduvad, aga ometi tahetakse vastavalt juhendile ühikuks määrata milligrammprotsenti. See ühik - milligrammprotsenti - näitab, mitu milligrammi $\beta$-karoteeni on \qty{100}{\mg} uuritavas proovis. Nüüd saan ma küll aru, miks milligrammprotsenti võib olla ka ühikuta, sest see on milligrammid jagatuna milligrammidega. Samas, Wikipedias arutletakse, et mõeldud oli kontsentratsiooni massiühikutes ruumalaühiku kohta, kuid ebakorrektselt[@a2021_milligram], sest korrektne selgitus tähendaks hoopis sajandikku milligrammi. Aga sellises juhus ei ole valem korrektne.
 
 Vastavalt juhendis esitatud neeldumisgraafikute kujule sisaldasid nii porgandi kui paprika proov üheaegselt erinevaid karotenoide.

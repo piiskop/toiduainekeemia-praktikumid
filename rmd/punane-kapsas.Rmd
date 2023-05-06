@@ -1,3 +1,5 @@
+\twocolumn
+
 # Indikaatorvärv punasest kapsast
 
 ## Kuupäev
@@ -89,31 +91,33 @@ total_quantity_of_acid_or_lye <- quantity_of_acid_or_lye * 2
     
     ```
     
-11. Tühja keeduklaasi sisestati \qty{`r as.character(quantity_of_water_for_comparison)`}{\ml} destilleeritud vett.
+15. Tühja keeduklaasi sisestati \qty{`r as.character(quantity_of_water_for_comparison)`}{\ml} destilleeritud vett.
 
-12. Korrati sammu \num{11} kaks korda.
+16. Korrati sammu \num{11} kaks korda.
 
-13. Lisati sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka äädikhapet.
+17. Lisati sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka äädikhapet.
 
-14. Lisati sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka leelist.
+18. Lisati sammul \num{11} mainitud erinevasse keeduklaasi \num{`r as.character(quantity_of_acid_or_lye)`} tilka leelist.
 
-15. Sisestati tühja eri küvetti sammul \num{11} mainitud sama keeduklaasi lahus.
+19. Sisestati tühja eri küvetti sammul \num{11} mainitud sama keeduklaasi lahus.
 
-16. Korrati sammu \num{15}.
+20. Korrati sammu \num{15}.
 
-17. Sisestati tühja eri küvetti sammul \num{9} mainitud eri keeduklaasi lahus.
+21. Sisestati tühja eri küvetti sammul \num{9} mainitud eri keeduklaasi lahus.
 
-18. Lasti juhendajal mõõta neeldumisspekter.
+22. Lasti juhendajal mõõta neeldumisspekter.
 
-19. Sisestati tühja eri küvetti sammul \num{11} mainitud eri keeduklaasi lahus.
+23. Sisestati tühja eri küvetti sammul \num{11} mainitud eri keeduklaasi lahus.
 
-20. Korrati samme \numrange{16}{18}.
+24. Korrati samme \numrange{16}{18}.
 
-21. Kordasime samme \numrange{19}{20}.
+25. Kordasime samme \numrange{19}{20}.
 
-22. Tekitati meile sisendandmete fail.
+26. Tekitati meile sisendandmete fail.
 
-23. Sisendfaili põhjal näidatakse kapsa neeldumisspektrid.
+\onecolumn
+
+27. Sisendfaili põhjal näidatakse kapsa neeldumisspektrid.
 
     Terve optilise tiheduse graafik äädikhappega kapsavedeliku kohta on näha joonisel \@ref(fig:whole-graph-of-cabbage-with-acid) leheküljel `r render_pageref(reference = "fig:whole-graph-of-cabbage-with-acid")`.
     
@@ -219,6 +223,8 @@ total_quantity_of_acid_or_lye <- quantity_of_acid_or_lye * 2
     ```
     
     Tippväärtused on \num{`r as.character(peak_indices_of_cabbage[1, 1])`}, \num{`r as.character(peak_indices_of_cabbage[2, 1])`} ja \num{`r as.character(peak_indices_of_cabbage[3, 1])`}, millele vastavad lainepikkused \qty{`r as.character(wave_length_1_of_cabbage)`}{\nm}, \qty{`r as.character(wave_length_2_of_cabbage)`}{\nm} ja \qty{`r as.character(wave_length_3_of_cabbage)`}{\nm}.
+
+\twocolumn
 
 ## Arutelu
 

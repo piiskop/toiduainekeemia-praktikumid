@@ -151,6 +151,8 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
 
 25. Tiitriti lahust kisselliga, kuni see muutus õrnroosaks.
 
+\onecolumn
+
 26. Lasti arvutada invertsuhkru sisalduse kissellis kasutades valemit \@ref(eq:invert-sugar) leheküljel `r render_pageref(reference = "eq:invert-sugar")`.
     
     ```{=tex}
@@ -183,6 +185,8 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
     ```
     
     Invertsuhkru sisaldus kissellis oli `r as.character(signif(X, digits = 3))`.
+    
+\twocolumn
     
 27. Lasti arvutada inverteerunud sahharoosi sisalduse kissellis kasutades valemit \@ref(eq:X1) leheküljel `r render_pageref(reference = "eq:X1")`.
     

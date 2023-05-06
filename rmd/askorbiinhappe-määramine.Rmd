@@ -115,6 +115,8 @@ mass_of_C <- 1
 
 9. Segati magnetsegajaga.
 
+\onecolumn
+
 10. Kolbi valmistatud lahust tiitriti ühtlase sinise värvuse tekkeni. Kaaliumjodiidi lahuses olid kaaliumi ja joodi ioonid, millest kaaliumi omad enam tähtsust ei oma. Kaaliumjodaat reageeris joodi ioonidega happelises keskkonnas, mille tekitas \ce{HCl}, mis oli vesilahuses samuti ioonidena. Valemis \@ref(eq:KIO3-I-I2-K) leheküljel `r render_pageref(reference = "eq:KIO3-I-I2-K")` on esitatud kaaliumjodaadi ja joodi iooni reageerimise tasakaalustamata ja kõikide produktideta skeem [@santamonicacollege_2017_10].
 
     ```{=tex}
@@ -294,6 +296,8 @@ mass_of_C <- 1
     ```
 
     Tiitrimiseks võeti ilmselt \qty{`r as.character(signif(amount_of_C, digits = 2))`}{\mol} C-vitamiini.
+
+\twocolumn
     
 12. Lasti arvutada kaaliumjodaadi lahuse molaarsus.
 

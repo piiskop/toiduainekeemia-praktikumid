@@ -1,3 +1,5 @@
+\twocolumn
+
 # Agaroosi geelistamine
 
 ## Kuupäev

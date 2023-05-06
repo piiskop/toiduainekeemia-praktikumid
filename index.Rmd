@@ -12,7 +12,7 @@ title: "`r if (knitr::is_latex_output()) { '' } else { 'Toiduaine keemia praktik
 documentclass: report
 papersize: a4
 geometry: top=2cm, right=2cm, bottom=3cm, left=3cm
-classoption: onecolumn, twoside
+classoption: twocolumn, twoside
 linestretch: 1.5
 
 fontsize: 12pt

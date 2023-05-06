@@ -38,6 +38,8 @@ Alginaadist geeli tegemise oskus omandatud.
 
 ## Töö käik
 
+\onecolumn
+
 ```{r label = "V-NaAlg", echo=FALSE}
 V_NaAlg <- 20e-6
 ratio_NaAlg <- 1e-2

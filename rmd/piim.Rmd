@@ -81,7 +81,12 @@ Piima rasvasisaldus kontrollitud.
 
 8. Loksutati rahulikult pool minutit.
 
-9. Lasti segul kihistuda.
+9.  Lasti segul kihistuda (joonis \@ref(fig:milk-levels) leheküljel `r render_pageref(reference = "fig:milk-levels")`).
+    
+    ```{r label = "milk-levels", echo=FALSE, fig.cap = "Peale piima ja metüleenkloriidi segu loksutamist ja kihistumist oli rasvata piim pealmises kihis."}
+    include_external_graphics("rmd/kihistunud-piim.jpg")
+
+    ```
 
 10. Viidi pealmine kiht Pasteur'i pipetiga tagasi keeduklaasi.
 
@@ -131,7 +136,14 @@ Piima rasvasisaldus kontrollitud.
 
 17. Lisati mõni tilk metüleenkloriidi piimast eraldatud rasvaga.
 
-18. Loksustati. Värvus muutus roosast mattkollakaks-valkjaks. Järelikult kaaliumpermanganaat oksüdeeris rasva.
+18. Loksustati. Värvus muutus roosast mattkollakaks-valkjaks (joonis \@ref(fig:na2co3-kmno4-methylene-chloride-milk-fat) leheküljel `r render_pageref(reference = "fig:na2co3-kmno4-methylene-chloride-milk-fat")`).
+    
+    ```{r label = "na2co3-kmno4-methylene-chloride-milk-fat", echo=FALSE, fig.cap = "Naatriumkarbonaadi, kaaliumpermanganaadi ja metüleenkloriidiga piimarasva segunemise tulemus."}
+    include_external_graphics("rmd/na2co3-kmno4-metüleenkloriid-piimarasv.jpg")
+
+    ```
+    
+    Järelikult kaaliumpermanganaat oksüdeeris rasva.
 
 []{#valgusisaldus}
 
@@ -188,7 +200,12 @@ Piima valgusisaldus kontrollitud.
 
 3. Jäeti paariks minutiks seisma.
 
-4. Filtreeriti lahus läbi filterpaberi ning säilitati nii filtraat kui sade.
+4. Filtreeriti lahus läbi filterpaberi ning säilitati nii filtraat kui sade (joonis \@ref(fig:milk-without-fat-with-acetic-acid-sediment) leheküljel `r render_pageref(reference = "fig:milk-without-fat-with-acetic-acid-sediment")`).
+    
+    ```{r label = "milk-without-fat-with-acetic-acid-sediment", echo=FALSE, fig.cap = "Rasvata piimale äädikhappe lisamise ja segamise ning filtreerimise tulemusena tekkinud sade."}
+    include_external_graphics("rmd/rasvata-piim-äädikhappe-sade.jpg")
+
+    ```
 
 5. Tühja katseklaasi pipeteeriti \qty{2}{\ml} filtraati.
 
@@ -196,7 +213,12 @@ Piima valgusisaldus kontrollitud.
 
 7. Tühja katseklaasi pipeteeriti \qty{2}{\ml} vett.
 
-8. Veele lisati veidi sadet.
+8. Veele lisati veidi sadet. Sammudes \numrange{5}{8} täidetud katseklaasid on näidatud joonisel \@ref(fig:filtrate-milk-water-sediment) leheküljel `r render_pageref(reference = "fig:filtrate-milk-water-sediment")`.
+    
+    ```{r label = "filtrate-milk-water-sediment", echo=FALSE, fig.cap = "Vaataja poolt vasemalt rasvata piima ja äädikhappe segu filtraat, piim ja vesi sademega."}
+    include_external_graphics("rmd/filtraat-piim-vesi-sade.jpg")
+
+    ```
 
 9. Asetati veega katseklaas kuuma vesivanni ja aeg-ajalt loksutati, et sade lahustuks.
 
@@ -212,4 +234,9 @@ Piima valgusisaldus kontrollitud.
 
 15. Lisati veega katseklaasi \numrange{`r as.character(min_quantity_of_CuSO4_per_tube)`}{`r as.character(max_quantity_of_CuSO4_per_tube)`} tilka \ce{CuSO4} lahust.
 
-16. Loksutati sammudel \numrange{5}{7} mainitud katseklaase. Sisu kõikides katseklaasides värvus eri tooni roosakas-lillaks. Filtraadiga katseklaasis oli lõpuks segu kahkjaslilla, piimaga katseklaasis õrnroosa ja veega katseklaasis sügavlilla.
+16. Loksutati sammudel \numrange{5}{7} mainitud katseklaase. Sisu kõikides katseklaasides värvus eri tooni roosakas-lillaks. Filtraadiga katseklaasis oli lõpuks segu kahkjaslilla, piimaga katseklaasis õrnroosa ja veega katseklaasis sügavlilla (joonis \@ref(fig:filtrate-milk-sediment-NaOH-CuSO4) leheküljel `r render_pageref(reference = "fig:filtrate-milk-sediment-NaOH-CuSO4")`).
+    
+    ```{r label = "filtrate-milk-sediment-NaOH-CuSO4", echo=FALSE, fig.cap = "Vaataja poolt vasemalt rasvata piima ja äädikhappe segu filtraat, piim ja vesi sademega pärast igaühte naatriumhüdroksiidi ja vasksulfaadi lisamist."}
+    include_external_graphics("rmd/filtraat-rasvata-piim-sade-naoh-cuso4.jpg")
+
+    ```

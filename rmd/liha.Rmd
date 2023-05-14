@@ -86,7 +86,7 @@ Termotöötluse denautreeriv mõju lihasvalkudele nähtud.
     Jälgiti liha värvuse muutumist. Liha värvus muutus erkroosast hallikaks tuhmroosaks (joonis \@ref(fig:meat-after-heating) leheküljel `r render_pageref(reference = "fig:meat-after-heating")`). Kuumutamise kestel lagunes müoglobiin vabastades hapniku ja kaotades erkroosa värvuse. Toimus liha denaturatsioon.
 
     ```{r label = "meat-after-heating", echo=FALSE, fig.cap = "Pärast kuumutamist oli liha värvus hallikas tuhmroosa. Lisatakse vett, et selle abil liha viia koonilisse kolbi."}
-    include_external_graphics("rmd/liha-pärast-kuumutamist.png")
+    include_external_graphics("rmd/liha-kuumutatuna.jpg")
 
     ```
 

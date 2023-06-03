@@ -87,7 +87,7 @@ mass_of_C <- 1
 
 ```
 
-1.  Uhmerdati \num{`r as.character(mass_of_C)`}-\unit{\mg} C-vitamiini sisaldav tablett.
+1.  Uhmerdati \num{`r as.character(mass_of_C)`}-\unit{\g} C-vitamiini sisaldav tablett.
 
     ```{r label = "volume-of-H2O", echo=FALSE}
     volume_of_H2O <- 200
@@ -117,7 +117,12 @@ mass_of_C <- 1
 
 \onecolumn
 
-10. Kolbi valmistatud lahust tiitriti ühtlase sinise värvuse tekkeni. Kaaliumjodiidi lahuses olid kaaliumi ja joodi ioonid, millest kaaliumi omad enam tähtsust ei oma. Kaaliumjodaat reageeris joodi ioonidega happelises keskkonnas, mille tekitas \ce{HCl}, mis oli vesilahuses samuti ioonidena. Valemis \@ref(eq:KIO3-I-I2-K) leheküljel `r render_pageref(reference = "eq:KIO3-I-I2-K")` on esitatud kaaliumjodaadi ja joodi iooni reageerimise tasakaalustamata ja kõikide produktideta skeem [@santamonicacollege_2017_10].
+10. Kolbi valmistatud lahust tiitriti ühtlase sinise värvuse tekkeni (joonis \@ref(fig:consistent-blue-color-of-solution) leheküljel `r render_pageref(reference = "fig:consistent-blue-color-of-solution")`). Kaaliumjodiidi lahuses olid kaaliumi ja joodi ioonid, millest kaaliumi omad enam tähtsust ei oma. Kaaliumjodaat reageeris joodi ioonidega happelises keskkonnas, mille tekitas \ce{HCl}, mis oli vesilahuses samuti ioonidena. Valemis \@ref(eq:KIO3-I-I2-K) leheküljel `r render_pageref(reference = "eq:KIO3-I-I2-K")` on esitatud kaaliumjodaadi ja joodi iooni reageerimise tasakaalustamata ja kõikide produktideta skeem [@santamonicacollege_2017_10].
+    
+    ```{r label = "consistent-blue-color-of-solution", echo=FALSE, fig.cap = "Tiitrimine tuli lõpetada kohe, kui tiitritav lahus oli saavutanud sellise ühtlase sinise värvuse."}
+    include_external_graphics("rmd/ühtlase-sinise-värvusega-lahus.jpg")
+
+    ```
 
     ```{=tex}
     \begin{align}

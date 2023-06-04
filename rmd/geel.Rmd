@@ -128,7 +128,12 @@ ratio_NaAlg <- 1e-2
 
 2. Kuumutati naatriumalginaadi lahus pliidil magnetsegajaga segades.
 
-3. Lisati pipetiga naatriumalginaati vaheldumisi kummassegi kaaliumkloriidi lahusesse, kuni tekkisid läbipaistvad pallikesed. \num{20}-\unit{\percent} lahuses tekkisid pallikesed kiiremini.
+3. Lisati pipetiga naatriumalginaati vaheldumisi kummassegi kaaliumkloriidi lahusesse, kuni tekkisid läbipaistvad pallikesed. \num{20}-\unit{\percent} lahuses tekkisid pallikesed kiiremini (joonis \@ref(fig:balls-20-percent) leheküljel `r render_pageref(reference = "fig:balls-20-percent")`).
+    
+    ```{r label = "balls-20-percent", echo=FALSE, fig.cap = "Pallikesed \\num{20}-\\unit{\\percent} lahuses."}
+    include_external_graphics("rmd/pallikesed-viiendikuses-lahuses.jpg")
+
+    ```
 
 4. Filtriti kõik läbipaistvad pallikesed tühja keeduklaasi loputades samaaegselt veega.
 

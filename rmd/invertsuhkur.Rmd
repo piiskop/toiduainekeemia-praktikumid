@@ -153,7 +153,7 @@ volume_of_water <- volume_of_water_for_kissel + volume_of_measuring_beaker - vol
 
 \onecolumn
 
-26. Lasti arvutada invertsuhkru sisalduse kissellis kasutades valemit \@ref(eq:invert-sugar) leheküljel `r render_pageref(reference = "eq:invert-sugar")`.
+26. Lasti arvutada invertsuhkru sisaldus kissellis kasutades valemit \@ref(eq:invert-sugar) leheküljel `r render_pageref(reference = "eq:invert-sugar")`.
     
     ```{=tex}
     \begin{align}

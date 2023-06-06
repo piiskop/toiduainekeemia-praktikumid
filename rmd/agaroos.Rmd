@@ -64,5 +64,9 @@ m_agarose_solution <- 20e-3
 
 4. Mõõdeti mõõtesilindrisse õli.
 
-5. Tilgutati agaroosi lahust õlisse jälgides pallide teket. Pallikesed olid nagu mullikesed ja vajusid põhja.
+5.  Tilgutati agaroosi lahust õlisse jälgides pallide teket. Pallikesed olid nagu mullikesed ja vajusid põhja (joonis \@ref(fig:agarose-in-oil) leheküljel `r render_pageref(reference = "fig:agarose-in-oil")`).
 
+    ```{r label = "agarose-in-oil", echo=FALSE, fig.cap = "Põhjavajuvad agaroosimullikesed õlis."}
+    include_external_graphics("rmd/agaroos-õlis.jpg")
+
+    ```
